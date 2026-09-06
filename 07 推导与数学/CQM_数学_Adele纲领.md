@@ -115,7 +115,7 @@ $$\boxed{\Delta\tau \cdot \Delta u \geq \frac{C}{2}}$$
 等价于耦合常数空间的标量形式：
 $$\boxed{\frac{\Delta r}{\langle r\rangle} \cdot \Delta \tau \geq \frac{C}{2}}$$
 
-其中 $v_\tau = du/d\tau = C e^u$ 为固有时流速。
+其中 $du/d\tau = C e^u$ 为耦合常数沿固有时 $\tau$ 的 RG 流速（§2.3 特征线）。
 
 ---
 
