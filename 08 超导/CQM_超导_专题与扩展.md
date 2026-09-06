@@ -464,7 +464,7 @@ $$\boxed{\beta\delta_v + \frac{3\beta^2}{16(\gamma_2-\gamma_1)}\Delta\delta_0^2 
 |:---|:---|:---|
 | `Ontology` | §1 本体论 | 有限本体公理、RQM 唯物化、电子作为基态耦合对应 |
 | `TransitionTemperature` | §11.2 $T_c$ | `criticalTemperature`、BCS 精确常数 |
-| `TransitionTemperatureCQM` | §11.2 $T_c$（G22 闭合） | CQM 临界温度严格推导：谱量子 $C$、玻色恒等式、丛作用量交叉 $F_1=F_2$ |
+| `TransitionTemperatureCQM` | §11.2 $T_c$（G22 闭合） | CQM 临界温度严格推导：相变量子 $C$、玻色恒等式、丛作用量交叉 $F_1=F_2$ |
 | `Reduction` | §11 温度依赖（BCS 退化与还原） | 能隙方程、$T_c$ 方程、普适能隙比、同位素 $\alpha=1/2$ |
 | `CartanSuperconductivity` | §9 库珀对跃迁（A4 谱分解与序参量） | A4 谱分解、序参量正性（`superconductingOrderTensor_pos`） |
 | `FirstPrinciples` | §11.3 统计极限 | A4→晶格声子→耦合→能隙→$T_c$；`gapIntegral_pr`；再生产维持（锁定因子衰减） |
@@ -1415,13 +1415,13 @@ d_partial=1(铁基): 无额外抑制 d_partial=0(重费米子): 强额外抑制
 
 **当前状态**：重费米子修正理论推导完成，但在框架**对称误差标准**（$e = \max(r, 1/r) - 1$，要求 $0.5T_c < T_{\text{pred}} < 2T_c$）下，重费米子修正过度抑制铁基超导体（如SmFeAsO被抑制60倍），导致总体精度从52.8%降至49.2%。在**绝对误差标准**（$e = |T_{\text{pred}} - T_c|/T_c$，不惩罚低估）下，修正有效（+4个材料）。**未整合到主框架**，待解决低估惩罚问题。
 
-#### ★★★★ 超导的谱结构：谱量子与从嘉当矩阵谱间隙第一性推导
+#### ★★★★ 超导的谱结构：相变量子与从嘉当矩阵谱间隙第一性推导
 
 > 完整理论见 `01 核心理论/CQM_核心_朗兰兹分层共振与谱量子.md` §6。本节给出超导核心理论中的定位与数值证据。
 
-**超导使用谱量子 $C$（GL(5)固定层级）**。$C \neq 0$ 进入不确定性关系 $\Delta u \cdot \Delta v_\tau \geq C/2$：
+**超导使用相变量子 $C$（GL(5)固定层级）**。$C \neq 0$ 进入不确定性关系 $\Delta u \cdot \Delta v_\tau \geq C/2$：
 
-| 物理扇区 | 朗兰兹层级 | 谱量子 | 作用 | CQM 状态 |
+| 物理扇区 | 朗兰兹层级 | 相变量子 | 作用 | CQM 状态 |
 |:---|:---|:---|:---|:---|
 | **电磁 $U(1)$** | GL(5)固定层级 | $C = \sum_n 1/(\gamma_n^2+1/4) \approx 0.0230957$ | 耦合常数涨落 → $T_c$ 公式 | 已引入 |
 

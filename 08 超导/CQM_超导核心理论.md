@@ -37,7 +37,7 @@ $$\boxed{\text{FG} \neq \text{GR}}$$
 - FG 是一个联络生成两种曲率——底空间 Regge 角亏 $\delta_v$（离散曲率）+ 伴丛曲率 $F=d\mathcal{A}+\mathcal{A}\wedge\mathcal{A}$（联络曲率）——**不受 $G_N$ 约束**，量级 $O(1)$
 - FG 不走 Regge→GR 连续极限→Poisson 方程路径——它直接由底空间 Regge 角亏给出（见 `01 核心理论/CQM_核心_三种引力存在论前提.md` §3）
 
-### 1.2 谱量子
+### 1.2 相变量子
 
 $$\boxed{C = \frac{\xi'(1)}{\xi(1)} = 1 + \frac{\gamma}{2} - \ln(2\sqrt{\pi}) \approx 0.0230957}$$
 
@@ -87,7 +87,7 @@ FG底空间上的主丛 $P(M,G)$（激发态）的每个顶点——底空间 $M
 | 同步条件 | 和乐平庸化约束 $\mathcal{H}_{ij}\approx1$（和乐平庸化） | §10.1 |
 | 同步判据 | 资格条件 $\Delta\delta_0 \ge \frac{C\sqrt{1-\beta\delta_v}}{2\beta\ln n}$ 筛选候选结构群族，丛作用量竞争选出主导群（$n$ 为跃迁耦级） | §9.2 |
 
-> **说明**：不确定性关系基于谱量子 $C$，给出下界 $C/2$。$n$ 为跃迁耦级（$n=2,4,6,\ldots$）。
+> **说明**：不确定性关系基于相变量子 $C$，给出下界 $C/2$。$n$ 为跃迁耦级（$n=2,4,6,\ldots$）。
 | 去同步因素 | 温度（声子数 → 和乐相位噪声） | §11 |
 | 全局同步临界点 | $T_c$（和乐平庸化相变点） | §11.2 |
 
@@ -380,7 +380,7 @@ $$\frac{d\tau}{dt} = \sqrt{-g_{00}} = \sqrt{1 + 2\Phi/c^2} \approx 1 + \frac{\Ph
 
 $$\boxed{p_u = \frac{1}{C}\frac{d\tau}{dt}}$$
 
-其中 $C = \xi'(1)/\xi(1)$ 是谱量子。
+其中 $C = \xi'(1)/\xi(1)$ 是相变量子。
 
 ### 8.2 海森堡代数
 
@@ -396,7 +396,7 @@ $$\boxed{\Delta u \cdot \Delta\delta_v \ge \frac{C\sqrt{\,1-\beta\delta_v\,}}{\b
 
 （若取标准海森堡约定 $\Delta u\,\Delta p_u \ge 1/2$ 则右端减半。）
 
-**物理意义**：底空间Regge曲率涨落通过联络诱导的固有时流速涨落，强制主丛结构群上的耦合常数产生量子涨落。阈值由谱量子 $C$、几何耦合参数 $\beta$ 与背景底空间曲率 $\delta_v$ 共同决定。
+**物理意义**：底空间Regge曲率涨落通过联络诱导的固有时流速涨落，强制主丛结构群上的耦合常数产生量子涨落。阈值由相变量子 $C$、几何耦合参数 $\beta$ 与背景底空间曲率 $\delta_v$ 共同决定。
 
 ---
 
@@ -739,7 +739,7 @@ $$\boxed{T_c = \frac{\theta_D}{2 \cdot \text{arccoth}(x)}, \quad x = \frac{3\bet
 ### 12.1 基础本体链
 
 $$\boxed{\begin{aligned}
-&\text{三种引力（QG/GR/FG，FG}\neq\text{GR）} + \text{谱量子 } C \\
+&\text{三种引力（QG/GR/FG，FG}\neq\text{GR）} + \text{相变量子 } C \\
 &\Downarrow \\
 &\text{质子 } A_4 + \text{中子 } D(\delta) \\
 &\Downarrow \\
@@ -969,7 +969,7 @@ $$\boxed{\text{同步} = \text{相位相干（全局相位锁定）} \;\neq\; \t
 | $\mathcal{C}_{\text{mol}}$ | 分子有效超级嘉当矩阵 | 大方矩阵 |
 | $\delta_v$ | Regge 顶点角亏 | 实数 |
 | $\Delta\delta_v$ | 曲率涨落（声子） | 实数 |
-| $C$ | 谱量子 $\xi'(1)/\xi(1) = 1+\gamma/2-\ln(2\sqrt{\pi}) \approx 0.0230957$ | 无量纲实数 |
+| $C$ | 相变量子 $\xi'(1)/\xi(1) = 1+\gamma/2-\ln(2\sqrt{\pi}) \approx 0.0230957$ | 无量纲实数 |
 | $\beta$ | 几何耦合参数 $\frac{1}{4\pi}\ln\frac{L}{a}$（$L$系统尺寸，$a$晶格常数） | 无量纲实数 |
 | $u$ | 耦合坐标 $\ln\alpha$ | 无量纲实数 |
 | $p_u$ | 耦合动量 $(1/C)(d\tau/dt)$ | 无量纲实数 |

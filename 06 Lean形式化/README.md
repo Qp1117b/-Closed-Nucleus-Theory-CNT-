@@ -18,7 +18,7 @@
 | **CausalSet** | `Basic.lean`, `Reproduction.lean`, `Sprinkling.lean`, `Axioms.lean` | `CausalSet`、`ReproductionOperator`、`asymm`、`sprinklingDensity` |
 | **CouplingSpace** | `Basic.lean`, `Uncertainty.lean` | `couplingStrength`、`CanonicalCommutation`、`robertson_ccr_inequality` |
 | **CartanAlgebra** | `Basic.lean` | `cartanA4`、本征值精确表达式、`dynkinIndex`、`simplexEulerChar` |
-| **SpectralGeometry** | `Basic.lean`, `Mathieu.lean`, `MathieuContinuedFraction.lean`, `RiemannXi.lean`, `GLnTrivialSpectralQuantum.lean` | `spectralQuantum`、`mathieuParameter`、`goldenRatio`、`adeleCycle`、Sierra-CQM 耦谱、黎曼 ξ 函数、**GL(n) 平凡表示谱量子 C_n=n·C₁ 缩放律与归一化普适性** |
+| **SpectralGeometry** | `Basic.lean`, `Mathieu.lean`, `MathieuContinuedFraction.lean`, `RiemannXi.lean`, `GLnTrivialSpectralQuantum.lean` | `spectralQuantum`、`mathieuParameter`、`goldenRatio`、`adeleCycle`、Sierra-CQM 耦谱、黎曼 ξ 函数、**GL(n) 平凡表示相变量子 C_n=n·C₁ 缩放律与归一化普适性** |
 | **PrimeGeometry** | `Basic.lean`, `Compton.lean`, `Generation.lean`, `Particle.lean`, `Spin.lean`, `WindingDensity.lean` | 因果时几何：多边形/弧段/位置结构、粒子谱、自旋、康普顿、代际、绕数密度 |
 | **Decoherence** | `Basic.lean`, `DeepCoupling.lean` | `confinementScale`、`CausalLayer`、三层结构、跨层级退相干深耦合与唯一性 |
 | **PhysicalConstants** | `Basic.lean` | `GN_spectral_formula`、`alpha_inverse_SU5`、CODATA 偏差 |
@@ -59,7 +59,7 @@ Axioms
 │ ├── SU(5) Weyl 群 = S₅ = 4-单纯形对称群
 │ └── Dynkin 指数 I = 5/3
 │
-├── A2.2: 谱量子 C = ξ'(1)/ξ(1)
+├── A2.2: 相变量子 C = ξ'(1)/ξ(1)
 │ ├── Mathieu 参数 q = φ/2（黄金比例一半，从 A₄ 本征值严格导出）
 │ │ ├── φ = (1+√5)/2, φ² = φ + 1
 │ │ ├── q = (λ₄-λ₁)/(λ₄+λ₁) = φ/2 ≈ 0.809
@@ -123,7 +123,7 @@ Axioms
 | — | Mathieu 第一特征值 b₁(q) | `SpectralGeometry` | `axiom` (待 Mathieu 函数理论) |
 | — | 素数冻结定理严格证明 | `SpectralGeometry` | 数值验证 (100% 成功率) |
 | — | Adele 约束 ∏_p ℤ_p = 1/30（有限乘积形式） | `SpectralGeometry` | 已证明 (`native_decide`) |
-| — | 谱量子 C = ξ'(1)/ξ(1) 的闭式表达式 | `SpectralGeometry` | 已严格证明 |
+| — | 相变量子 C = ξ'(1)/ξ(1) 的闭式表达式 | `SpectralGeometry` | 已严格证明 |
 | — | 因果分辨率 → 引力场有效描述的尺度依赖 | `ElementCartan` | `def` 占位（哲学立场） |
 | — | 中子星/强引力例外（理想块对角失效、牛顿退化失效） | `ElementCartan` | `def` 占位（需核物理/量子引力） |
 
@@ -259,7 +259,7 @@ lake build FGChain # 编译 FG 纤维丛理论链路库（7 模块，待验证�
 - **删除未使用公理**：移除 `mathieu_critical_condition`（对占位函数 `b1` 的任意约束，且无任何定理引用）
 - **清理测试残留**：删除未加入 `lakefile.toml` 且含 `sorry` 的 `TestNum.lean`
 - **更新定理/公理统计**：按实际代码重新计数，当前 180 个定理 / 8 个公理（含物理假设与数值桥梁）
-- **消除虚假精确等式**：谱量子 `C` 严格定义为 `1 + γ/2 - (1/2)ln(4π)`，数值近似以区间公理显式标注
+- **消除虚假精确等式**：相变量子 `C` 严格定义为 `1 + γ/2 - (1/2)ln(4π)`，数值近似以区间公理显式标注
 
 ## 版本
 

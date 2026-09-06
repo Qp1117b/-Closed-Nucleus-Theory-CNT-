@@ -83,7 +83,7 @@ $$\boxed{\chi(u, p_u) = p_u - \frac{Ce^u - 1}{2} = 0}$$
 **原理 IV（能标-固有时对易子）**：
 $$[\hat{\tau}, \hat{u}] = iC$$
 
-> **谱量子说明**：不确定性关系 $\Delta\tau \cdot \Delta u \geq C/2$，$C$ 为单一普适谱量子。
+> **相变量子说明**：不确定性关系 $\Delta\tau \cdot \Delta u \geq C/2$，$C$ 为单一普适相变量子。
 
 ### 2.3 传输方程——体区域严格导出
 
