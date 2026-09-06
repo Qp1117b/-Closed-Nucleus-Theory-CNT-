@@ -22,7 +22,7 @@
 | **PrimeGeometry** | `Basic.lean`, `Compton.lean`, `Generation.lean`, `Particle.lean`, `Spin.lean`, `WindingDensity.lean` | 因果时几何：多边形/弧段/位置结构、粒子谱、自旋、康普顿、代际、绕数密度 |
 | **Decoherence** | `Basic.lean`, `DeepCoupling.lean` | `confinementScale`、`CausalLayer`、三层结构、跨层级退相干深耦合与唯一性 |
 | **PhysicalConstants** | `Basic.lean` | `GN_spectral_formula`、`alpha_inverse_SU5`、CODATA 偏差 |
-| **Methodology** | `Basic.lean` | 涌现公式结构性表达、庸俗隐变量分解对比（公理为主） |
+| **Methodology** | `Basic.lean` | 涌现逻辑结构表达、庸俗隐变量分解对比（公理为主） |
 | **Superconductivity** | `Ontology.lean`, `TransitionTemperature.lean`, `TransitionTemperatureCQM.lean`, `Reduction.lean`, `CartanSuperconductivity.lean`, `FirstPrinciples.lean`, `SPAF.lean`, `BCSIntegralAsymptotic.lean`, `BridgeTheorems.lean`, `ElementCartan.lean`, `MolecularGeometry.lean`, `CouplingSpace.lean`, `FormalizationRigor.lean`, `DeepConstruction.lean`, `DeepResearch.lean`, `TestDet.lean` | 超导形式化（16 模块）：有限本体论、T_c、**CQM 临界温度严格推导（G22 闭合）**、**BCS 退化与还原**、**嘉当张量超导方程**、**第一性推导链**、**SPAF 半唯像框架**、**BCS 渐近分析（G13 闭合）**、**桥接定理**、**元素嘉当矩阵**、**分子几何→晶胞嘉当矩阵→Regge晶胞/角亏→FG退相干场**、**耦合空间曲率机制（跃迁耦级谱与自由能竞争）**、**形式化严谨化**、**深入构建（K_eff微观推导/A5群理论）**、**深入研究（θ_D/λ群论推导/缺口C/G15）**、**中子缺陷嘉当矩阵行列式测试** |
 | **FGChain** | `Basic.lean`, `QuantumOscillation.lean`, `CurvatureOperator.lean`, `ReggeBase.lean`, `FiberBundle.lean`, `Synchronization.lean`, `Observable.lean` | FG纤维丛理论链路形式化（7 模块）：两链发生学分离、晶胞量子振荡（谐振子谱 $E_n=\hbar\omega(n+1/2)$）、曲率算符（CQM海森堡对 $[\hat{u},\hat{p}_u]=iC$）、Regge底空间（两链交汇）、离散主丛（重组实现 $F=G\xleftrightarrow{}R=G\xleftrightarrow{}\hat{H}$、和乐平庸化、子群重组）、同步算符（零点谱经紧化约束进入 $\mathfrak{s}_n=1/4+\gamma_n^2$、本征值交叉 IVT、CFT幂律）、实验可观测结果（氢原子能级、壳层容量 2/6/10/14、跃迁耦级谱 $\Delta u_n=2\ln n$、BCS $T_c$）——**待编译验证** |
 
@@ -211,13 +211,13 @@ lake build FGChain # 编译 FG 纤维丛理论链路库（7 模块，待验证�
 - **A₄ 谱间隙标定晶格**：`latticeStiffnessFromA4_pos` / `phononFrequencyFromA4_pos` / `phononFrequencyFromA4_mono_in_stiffness`（A₄ 循环越强声子频率越高）
 - **弱耦合消失**：`bcsCriticalTemperature_tendsto_zero` 证明 λ → 0⁺ 时 T_c → 0（`Tendsto`，e^{−1/λ} 严格闭式导致，非经验截断）
 - **端到端正性链**：`firstPrinciples_chain_pos`——声子频率、耦合 λ、能隙闭式、张量超导序参量沿第一性链同为正
-- **再生产维持（坍缩难题②的解答）**：`phaseLockingFactor_tendsto_zero`——锁定因子 e^{−Γ|τ|} 随再生产间隔趋于 0：涌现态的确定性不能一次获得、必须被反复耦合事件再生产维持（涌现公式再生产项的必要性定理）
+- **再生产维持（坍缩难题②的解答）**：`phaseLockingFactor_tendsto_zero`——锁定因子 e^{−Γ|τ|} 随再生产间隔趋于 0：涌现态的确定性不能一次获得、必须被反复耦合事件再生产维持（涌现逻辑结构再生产锁定的必要性定理）
 - **金属氢实例（第二步计算起点）**：`hydrogenPhononFrequency_pos`——氢 = 单质子有限本体，禁闭几何直接是 A₄，德拜频率由谱间隙 λ₁ × 质子质量完全决定（A₄ 直接拼接，无需跨种类有限本体）
 - **输入与非推导声明**：A₄ 本征向量显式构造、晶格刚度参考标度、配对强度 V、费米面态密度 N(0) 均为理想化/主流输入；G13（T_c 方程 tanh→对数渐近）如实列入缺口，不冒充定理
 
 ## 本次更新亮点 (v0.5.4)
 
-- **嘉当张量超导方程**：新增 `CartanSuperconductivity.lean`（15 定理 + 1 引理），把 §6.8 张量涌现公式 𝒯_emergent = e^{−Γτ}·𝒫̂_𝒞(∫𝒟⊗𝒫 dμ) 理想化应用于超导序参量的 A₄ 本征谱分解——谱权重 [cartanEigenvalue]（因果潜能）× 谱系数（基础自由度）× 锁定因子 e^{−Γτ}，可观测序参量 = 对全部 4 通道的张量迹（Tr_𝒞 理想化）
+- **嘉当张量超导方程**：新增 `CartanSuperconductivity.lean`（15 定理 + 1 引理），把 §6.8 涌现逻辑结构理想化应用于超导序参量的 A₄ 本征谱分解——谱权重 [cartanEigenvalue]（因果潜能）× 谱系数（基础自由度）× 锁定因子 e^{−Γτ}，可观测序参量 = 对全部 4 通道的张量迹（Tr_𝒞 理想化）
 - **A₄ 双重角色（哈密顿量 = 能动张量）**：`cartanHamiltonian`（A₄ 作为离散 Laplacian，07 嘉当结构 §2.1）与 `stressEnergyTrace`（A₄ 谱和 = 8）一致性定理 `cartanHamiltonian_trace_eq_stressEnergyTrace`——同一谱 {λ₁..λ₄} 同时充当哈密顿量迹与能动张量迹
 - **张量序参量正性**：`superconductingOrderComponent_pos` / `superconductingOrderTensor_pos` / `superconductingOrderTensor_cartanWeights_pos`——A₄ 正定谱下超导序参量逐通道与全体严格为正
 - **谱间隙退化到 BCS**：谱间隙 λ₁ = (3−√5)/2 的强大 >0/<1/最小定理；`bcsGapInGapChannel`/`bcsTcInGapChannel` 表现谱间隙同时缩放 Δ 与 T_c；`gapChannel_gapRatio_invariant` 说明普适能隙比不受谱间隙缩放影响
