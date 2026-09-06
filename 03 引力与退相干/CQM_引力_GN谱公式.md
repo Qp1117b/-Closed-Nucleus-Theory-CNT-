@@ -292,6 +292,20 @@ $$\boxed{G_N = \frac{I \cdot \lambda_c \cdot C^2 \cdot \mathfrak{c}_1}{m_p^2} \c
 | 6 | $\exp(-2/C)$ | Adele Jacobian，Tate 自对偶 | 定理 | $2.464677412 \times 10^{-38}$ |
 | 7 | $m_p$ | 质子质量 | 实验输入（唯一） | $0.9382720882$ GeV |
 
+#### $\lambda_c$ 的解析定义（第一性）
+
+$\lambda_c$ 由 Mathieu 特征值方程严格确定：
+
+$$\boxed{\lambda_c = 2 \cdot b_1\!\left(\frac{\lambda_c}{4}\right)}$$
+
+其中 $b_1(q)$ 为 Mathieu 方程 $y'' + (a - 2q\cos 2z)y = 0$ 的第一奇特征值（周期 $\pi$ 的奇宇称解 $se_1(z,q)$）。
+
+等价地，$\lambda_c = 4q_c$，其中 $q_c$ 是无限连分数方程
+
+$$1 - 3q = \frac{q^2}{9-2q - \frac{q^2}{25-2q - \frac{q^2}{49-2q - \cdots}}}$$
+
+的最小正根。数值：$q_c \approx 0.3290057278$，$\lambda_c \approx 1.316022911$。解的唯一性由 Mathieu 连分数的唯一性定理保证（$q \in (0,1)$ 内唯一解）。
+
 ### 8.3 公式结构解析
 
 $$G_N = \underbrace{\left(\frac{I \cdot \lambda_c \cdot C^2 \cdot \mathfrak{c}_1}{m_p^2}\right)}_{\text{几何预因子}} \times \underbrace{\exp\left(-\frac{2}{C}\right)}_{\text{Adele UV}\to\text{IR Jacobian}} \times \underbrace{(1 + \kappa C)}_{\text{谱行列式修正}}$$
@@ -437,17 +451,17 @@ $$= \boxed{6.6742810045 \times 10^{-11}\ \text{m}^3 \cdot \text{kg}^{-1} \cdot \
 
 ### 11.1 已严格建立
 
-| 组件 | 状态 | 依据 |
-|:---|:---:|:---|
-| $C = \xi'(1)/\xi(1)$ | 严格 | Hadamard 乘积，解析数论 |
-| $\mathfrak{c}_1 = 1/4 + \gamma_1^2$ | 严格 | Sierra-CQM 定理 |
-| $\lambda_c$ 方程存在唯一性 | 严格 | Mathieu 连分数定理 |
-| $I = 5/3$ | 严格 | SU(5) Dynkin 指数 |
-| $M = E^T E$ 本征值 $\{9,4,1\}$ | 严格 | $S_5$ 表示论 + 迹约束 |
-| U(1)/SU(2)/SU(3) 不独立产生曲率 | 严格 | 根系分类 + 双曲镶嵌理论 |
-| Adele 自对偶（Tate thesis） | 严格 | 代数数论 |
-| $\exp(-2/C)$ 中 $C = \xi'(1)/\xi(1)$ 的对应 | 启发式 | Tate 自对偶严格，但 p 进谱行列式 $\to$ $C$ 的极点锁定需进一步严格化 |
-| $\kappa = (31+C)/30$ | 启发式 | $N_{\text{faces}}=31$ 与 $N_{\text{cycle}}=30$ 严格，但"此组合比即 $\kappa$"的对应需进一步严格化 |
+| 组件                                      | 状态  | 依据                                                                           |
+| :-------------------------------------- | :-: | :--------------------------------------------------------------------------- |
+| $C = \xi'(1)/\xi(1)$                    | 严格  | Hadamard 乘积，解析数论                                                             |
+| $\mathfrak{c}_1 = 1/4 + \gamma_1^2$     | 严格  | Sierra-CQM 定理                                                                |
+| $\lambda_c$ 方程存在唯一性                     | 严格  | Mathieu 连分数定理                                                                |
+| $I = 5/3$                               | 严格  | SU(5) Dynkin 指数                                                              |
+| $M = E^T E$ 本征值 $\{9,4,1\}$             | 严格  | $S_5$ 表示论 + 迹约束                                                              |
+| U(1)/SU(2)/SU(3) 不独立产生曲率                | 严格  | 根系分类 + 双曲镶嵌理论                                                                |
+| Adele 自对偶（Tate thesis）                  | 严格  | 代数数论                                                                         |
+| $\exp(-2/C)$ 中 $C = \xi'(1)/\xi(1)$ 的对应 | 启发式 | Tate 自对偶严格，但 p 进谱行列式 $\to$ $C$ 的极点锁定需进一步严格化                                  |
+| $\kappa = (31+C)/30$                    | 启发式 | $N_{\text{faces}}=31$ 与 $N_{\text{cycle}}=30$ 严格，但"此组合比即 $\kappa$"的对应需进一步严格化 |
 
 ### 11.2 关键缺口
 
