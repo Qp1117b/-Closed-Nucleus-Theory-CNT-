@@ -1,4 +1,4 @@
-﻿import Mathlib.Data.Real.Basic
+import Mathlib.Data.Real.Basic
 import Mathlib.Data.Real.Sqrt
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 import Mathlib.Analysis.SpecialFunctions.Arsinh

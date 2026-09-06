@@ -12,7 +12,7 @@
 
 **同步四阶段**：FG纤维丛+同步方程+CFT = 同步预备+同步发生+同步过程+同步完成。**同步预备**（FG纤维丛：各种赝状态——曲率算符 $\hat{\delta}_v$ 给出可能的同步模式，但还未同步）；**同步发生**（同步方程 $\hat{\mathcal{S}}\Psi = n\Psi$：共振量子化——什么样的态可以发生同步、同步成本多少）；**同步过程**（CFT：幂律传播 $r^{-2h}$——同步从触发点向全局扩大）；**同步完成**（状态跃迁——从未同步态跃迁到同步态）。共形自举是**共形自洽条件**（OPE结合律，静态约束）——配对顺序不影响结果，锁死结构常数。
 
-**核心结论**：CQM的三角结构（耦合常数↔同步成本↔紧致群）在共形固定点精确实现为CFT的OPE代数。共形自举方程（结合律）锁死耦合常数为离散值。元素FG的周期表第一性推导（Casimir→壳层容量、共形维度 $h=n+l$→Madelung规则、$A_4$→$Z_{\max}=118$）
+**核心结论**：CQM的三角结构（耦合常数↔同步成本↔紧致群）在共形固定点精确实现为CFT的OPE代数。共形自举方程（结合律）锁死耦合常数为离散值。元素FG的周期表第一性推导（Casimir→壳层容量、共形维度 $h=n+l$→Madelung规则、$A_4$→$Z_{\max}=118$）是CFT框架的三大应用成果。
 
 ## 1. 从"与能量无关"到共形固定点
 
@@ -121,9 +121,9 @@ $$\boxed{|\{n_k\}\rangle_{\text{sync}} \otimes |u_k\rangle_{\text{coup}} \xright
 $$\mathcal{O}_i(z) \cdot \mathcal{O}_j(0) \sim \sum_{k} C_{ij}^{k} z^{h_k - h_i - h_j} \mathcal{O}_k(0)$$
 
 CQM对应：
-- $\mathcal{O}_i \leftrightarrow |\{n_k\}\rangle_{\text{sync}}$（同步算子，标度维度 $h_i = n_k$）
-- $\mathcal{O}_j \leftrightarrow |u_k\rangle_{\text{coup}}$（耦合算子，标度维度 $h_j = \ln g_k / \ln\Lambda$）
-- $\mathcal{O}_k \leftrightarrow |G_k\rangle_{\text{group}}$（群算子，标度维度 $h_k = C_k$）
+- $\mathcal{O}_i \leftrightarrow |\{n_k\}\rangle_{\text{sync}}$（同步算符，标度维度 $h_i = n_k$）
+- $\mathcal{O}_j \leftrightarrow |u_k\rangle_{\text{coup}}$（耦合算符，标度维度 $h_j = \ln g_k / \ln\Lambda$）
+- $\mathcal{O}_k \leftrightarrow |G_k\rangle_{\text{group}}$（群算符，标度维度 $h_k = C_k$）
 
 ### 3.4 OPE系数的确定
 
@@ -141,9 +141,9 @@ OPE结构常数 $C_{ij}^{k}$ 由以下严格确定：
 
 **共形自举（Conformal Bootstrap）**是现代物理学中大名鼎鼎的术语。如果听到物理学家说"Bootstrap"，99%指的就是它（为区分于上世纪60年代旧的"S矩阵自举"，现在通常加"共形"二字）。
 
-### 3.5.2 自举自举的是"结合律"
+### 3.5.2 自举的是"结合律"
 
-自举自举的是**结合律（Associativity）**，也就是OPE的相容性条件。
+自举的是**结合律（Associativity）**，也就是OPE的相容性条件。
 
 **具体来说**：四个算子的四点点函数，可以通过两种不同的OPE通道来分解：
 
@@ -301,7 +301,7 @@ $$c = \frac{k \cdot \dim(\mathfrak{su}(5))}{k + h^\vee_{\mathfrak{su}(5)}} = \fr
 
 **步骤2：谱量子 $C$ 通过水平修正进入，中央荷公式结构不变**
 
-谱量子 $C$ 通过紧化算符（Hilbert-Pólya算符 $\hat{H}_{\text{HP}} = \hat{\mathcal{S}}^2 + 1/4$，本征值 $\gamma_n^2 + 1/4$）修正GL(5)固定层级的Kac-Moody水平：
+谱量子 $C$ 通过 Hilbert-Pólya 算符（$\hat{H}_{\text{HP}} = \hat{\mathcal{S}}^2 + 1/4$，本征值 $\gamma_n^2 + 1/4$，GL(5) 固定层级的谱算符，区别于谱 $\subseteq\{0,1\}$ 的紧化投影）修正GL(5)固定层级的Kac-Moody水平：
 
 $$k^{\text{eff}} = k(1 + \delta(C) + O(C^2))$$
 
@@ -460,7 +460,7 @@ CQM中的"再生产"是**马克思谱系的再生产**——再次生产维持�
 
 ### 8.2 同步有过程，同步方程描述同步事件
 
-同步四阶段：**预备**（FG纤维丛：曲率算符 $\hat{\delta}_v$ 给出各种赝状态）→ **发生**（同步方程 $\hat{\mathcal{S}}|\psi\rangle = \mathcal{E}|\psi\rangle$：共振量子化，什么样的态可以发生同步、同步成本 $\mathcal{E}$ 是多少）→ **过程**（CFT：幂律传播 $r^{-2h}$，同步从触发点向全局扩大）→ **完成**（状态跃迁：从未同步态跃迁到同步态）。同步的过程需要CFT补充：
+同步四阶段：**预备**（FG纤维丛：曲率算符 $\hat{\delta}_v$ 给出各种赝状态）→ **发生**（同步方程 $\hat{\mathcal{S}}|\psi\rangle = n|\psi\rangle$：共振量子化，什么样的态可以发生同步、同步成本 $n$ 是多少）→ **过程**（CFT：幂律传播 $r^{-2h}$，同步从触发点向全局扩大）→ **完成**（状态跃迁：从未同步态跃迁到同步态）。同步的过程需要CFT补充：
 
 $$\text{触发点} \xrightarrow{\text{态-算符对应}} \text{态模式点燃} \xrightarrow{\text{幂律传播}} \text{全局覆盖} \xrightarrow{\text{定态约束}} \text{同步锁定}$$
 
@@ -550,7 +550,7 @@ CFT视角：紧化算符是**共形映射**，同步本征态是**初级算子**
 
 `CQM_核心_朗兰兹分层共振与谱量子.md`中的GL(n)分层：
 
-$$GL(5) \xrightarrow{\text{重组实现}} \text{规范群}$$
+$$GL(5) \xrightarrow{\text{紧化}} SU(5) \xrightarrow{\text{重组实现}} \text{规范群}$$
 
 CFT视角：GL(n)分层是**Kac-Moody代数的水平分层**，每个本征群对应一个Kac-Moody水平 $k$，中央荷 $c$ 由Sugawara构造确定。
 
@@ -558,7 +558,7 @@ CFT视角：GL(n)分层是**Kac-Moody代数的水平分层**，每个本征群�
 
 ### 9.3 与FG元素第一性的关系
 
-中的完整推导链：
+`09 精细引力（FG）/FG_纤维丛理论.md`中的完整推导链：
 
 $$\text{Regge剖分} \to \text{嘉当矩阵} \to \text{声子} \to \text{曲率算符} \to \text{同步方程} \to G_k \xrightarrow{\text{OPE}} \text{约束方程} \to N_k$$
 
@@ -686,7 +686,7 @@ CFT = 描述临界自组织态扩大的机制，同时也是同步的过程机�
  ├── 触发：态-算符对应 |φ⟩ = φ(0)|0⟩（插入即生成）
  ├── 扩大：幂律传播 ⟨φ(r)φ(0)⟩ = r^{-2h}（无衰减蔓延）
  ├── 锁定：⟨φ⟩ ≠ 0（全局覆盖）
- └── 完成：状态跃迁 → Ŝ|ψ⟩ = E|ψ⟩（从未同步态跃迁到同步态）
+  └── 完成：状态跃迁 → Ŝ|ψ⟩ = n|ψ⟩（从未同步态跃迁到同步态）
 
  共形自举 = 共形自洽（结合律约束）
  自举锁死结构常数 → 自组织得以无衰减进行（ξ→∞）

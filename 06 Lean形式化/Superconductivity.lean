@@ -1,4 +1,4 @@
-﻿import Superconductivity.Ontology
+import Superconductivity.Ontology
 import Superconductivity.TransitionTemperature
 import Superconductivity.TransitionTemperatureCQM
 import Superconductivity.Reduction

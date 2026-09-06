@@ -103,6 +103,7 @@ theorem oscillator_spectrum_strictMono {o : CellOscillation} (s : OscillatorSpec
 theorem oscillator_zero_point_pos {o : CellOscillation} (s : OscillatorSpectrum o) :
     0 < s.E 0 := by
   rw [s.ground]
+  unfold CellOscillation.energyQuantum
   positivity
 
 /-! ## 3. 动量-位置-能量关系（环节5） -/
@@ -147,8 +148,8 @@ theorem spectrum_spacing_mono_in_stiffness
     (h₁ : k₁ ≤ k₂) :
     hbar * Real.sqrt (k₁ / m) ≤ hbar * Real.sqrt (k₂ / m) := by
   have hdiv : k₁ / m ≤ k₂ / m := by
-    rw [div_le_div_iff hm hm]
-    exact mul_le_mul_of_nonneg_right h₁ hm.le
+    rw [div_le_div_iff_of_pos_right hm]
+    exact h₁
   exact mul_le_mul_of_nonneg_left (Real.sqrt_le_sqrt hdiv) hh.le
 
 end CQM.FGChain

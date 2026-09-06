@@ -1,4 +1,4 @@
-﻿import Mathlib.Data.Real.Basic
+import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 import CausalSet.Axioms
 import CartanAlgebra.Basic

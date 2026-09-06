@@ -1,4 +1,4 @@
-﻿import Mathlib.Data.Real.Basic
+import Mathlib.Data.Real.Basic
 import Mathlib.Analysis.SpecialFunctions.Exp
 import Mathlib.NumberTheory.Harmonic.EulerMascheroni
 import Mathlib.Tactic

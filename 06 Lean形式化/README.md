@@ -172,7 +172,7 @@ lake build FGChain # 编译 FG 纤维丛理论链路库（7 模块，待验证�
 ## 本次更新亮点 (v0.5.9)
 
 - **RQM 唯物化文档化**：将关系量子力学的唯物化操作正式纳入 SPAF 框架文档（§0）。三条原则：属性随附本体、因果自组织、观察者相对性的自然消解。推论：电子去特权化——取消电子的本体特权，使嘉当矩阵拼接理论得以统一处理超导问题，与 BCS 历史实践（晶格是关键）一致
-- **六层探索架构**：SPAF 半唯像框架路径从四阶段扩展为六层架构——层级 I（质子/中子嘉当矩阵）→ 层级 II（元素嘉当矩阵，理想积木）→ 层级 III（单元素 BCS 退化）→ 层级 IV（分子超嘉当矩阵→Weyl 嵌入）→ 层级 V（宏观 Regge 亏角→FG 退相干场强度）→ 层级 VI（因果分辨率）
+- **六层探索架构**：SPAF 半唯像框架路径从四阶段扩展为六层架构——层级 I（质子/中子嘉当矩阵）→ 层级 II（元素嘉当矩阵，理想积木）→ 层级 III（单元素 BCS 退化）→ 层级 IV（分子超嘉当矩阵→Weyl 嵌入）→ 层级 V（宏观 Regge 角亏→FG 退相干场强度）→ 层级 VI（因果分辨率）
 - **元素主次结构**：BCS 同位素效应揭示元素内部存在主次结构——质子扇区（纯 A4 块对角）为主、中子扇区（缺陷 A4 块对角）为次。主次结构直接指向 BCS 退化方向（往单元素材料退化），并揭示拼接规则（同种元素同位素之间 $\epsilon(N)$ 连续变化，跨元素种类需要 $t_{ij}$ 参数）
 - **阶段 0：元素层级**：新增计算管线步骤 0a–0d（质子/中子分配→元素嘉当矩阵组装→主次结构识别→BCS 退化验证），使元素层级计算先于分子层级
 - **新增缺口 11–15**：次结构谱间隙闭式、主次结构谱间隙差→同位素效应映射、因果分辨率形式化、牛顿引力退化定理（G17：FG不走Regge→GR连续极限，不作为缺口）、单元素拼接规则特殊性
@@ -183,9 +183,9 @@ lake build FGChain # 编译 FG 纤维丛理论链路库（7 模块，待验证�
 
 - **BCS 渐近分析（G13 闭合）**：新增 `BCSIntegralAsymptotic.lean`（9 定理），将 BCS 积分方程从第一性推导为对数方程。`bcsTcFromIntegral_solved` 严格证明 T_c = (2e^γ/π)·ω_D·exp(−1/λ) 是积分方程的唯一正解；`bcsTcFromIntegral_exists_unique` 证明存在唯一性。积分方程 ⟺ 对数方程 ⟺ 闭式 T_c 的完整推导链全部严格化
 - **`bcsConstant_gt_one` 公理→定理**：`2e^γ/π > 1` 从 `axiom` 升级为 `theorem`。证明链：γ > 1/2（Mathlib `one_half_lt_eulerMascheroniConstant`）→ exp(γ) > exp(1/2) → 平方差因式分解证明 2·exp(1/2) > π（利用 π < 3.1416 和 exp(1) > 2.718）→ 2·exp(γ)/π > 1。BCS 理论中前因子 > 1 的"数值事实"首次从 Mathlib 已知数值界严格证明
-- **桥接定理（跨模块因果链）**：新增 `BridgeTheorems.lean`（23 定理），将 CQM 各模块严格连接：`spectralGap_bcsTc_bound`（A₄ 谱间隙→BCS T_c 上限）、`gapChannelTc_exact`（谱间隙通道 T_c 闭式）、`spectralGap_to_ricciScalar_chain`（谱间隙→亏角密度→Ricci 标量）、`twoAtomSuperCartan_quadratic_lowerBound`（双原子耦合正定性）——用 Cauchy-Schwarz + AM-GM 严格证明 |t| < λ_min 时分子超嘉当矩阵正定
+- **桥接定理（跨模块因果链）**：新增 `BridgeTheorems.lean`（23 定理），将 CQM 各模块严格连接：`spectralGap_bcsTc_bound`（A₄ 谱间隙→BCS T_c 上限）、`gapChannelTc_exact`（谱间隙通道 T_c 闭式）、`spectralGap_to_ricciScalar_chain`（谱间隙→角亏密度→Ricci 标量）、`twoAtomSuperCartan_quadratic_lowerBound`（双原子耦合正定性）——用 Cauchy-Schwarz + AM-GM 严格证明 |t| < λ_min 时分子超嘉当矩阵正定
 - **元素嘉当矩阵（质/中子层级）**：新增 `ElementCartan.lean`（39 定理），从质子/中子基本嘉当矩阵出发，按 Z/N 组装元素嘉当矩阵。包含：质子扇区（纯 A₄ 块对角）、中子扇区（缺陷 A₄，参数 ε(N)）、同位素效应（ε(N) = ε₀·(1−β·(N−N_ref)/N_ref)）、**单元素材料 CQM→BCS 退化**（§9：ε→0 时 T_c→bcsCriticalTemperature(ω_D, λ₁)，BCS 是 CQM 在单元素、无中子缺陷极限下的特例）、极端引力例外（中子星/强引力/黑洞视界，5 个 `True` 占位转为诚实 `def`）
-- **分子几何→FG 退相干场管线**：新增 `MolecularGeometry.lean`（62 定理），完整形式化从分子构型到 FG 退相干场的管线：原子嘉当矩阵 → 分子超嘉当矩阵（块对角 + 跨原子耦合 t_ij）→ Weyl 嵌入（对角化提取谱间隙）→ Regge 亏角（δ_v = 2π − Σθ_tet）→ FG 退相干场强度（由角亏直接给出，不走 Regge→GR 连续极限）。`twoProtonCoupling_exactThreshold`（G20-ext 闭合）用 SOS 分解 + 黄金比例恒等式证明两质子耦合在 t < λ₁ 时正定
+- **分子几何→FG 退相干场管线**：新增 `MolecularGeometry.lean`（62 定理），完整形式化从分子构型到 FG 退相干场的管线：原子嘉当矩阵 → 分子超嘉当矩阵（块对角 + 跨原子耦合 t_ij）→ Weyl 嵌入（对角化提取谱间隙）→ Regge 角亏（δ_v = 2π − Σθ_tet）→ FG 退相干场强度（由角亏直接给出，不走 Regge→GR 连续极限）。`twoProtonCoupling_exactThreshold`（G20-ext 闭合）用 SOS 分解 + 黄金比例恒等式证明两质子耦合在 t < λ₁ 时正定
 - **SPAF 压强-温度几何构型**：已合并入 `SPAF.lean`，将压强和温度转化为 A₄ 几何效应：几何压缩因子 χ(P) = (P/P_ref)^(1/3)、桥接定理（χ(P)→ω_D(P)、χ(P)→λ(P)）、再生产因子 R(T) = exp(−Γ_eff(T)·τ)、自洽 T_c 方程
 - **消除所有 `True` 占位公理和 `sorry`**：`ElementCartan.lean` 中 5 个返回 `True` 的占位公理转为诚实 `def` 声明，明确标注"不构成证明，仅标记命题声明位置"。全部 12 个 Superconductivity 模块零 `sorry`、零 `axiom`（除 `Ontology.lean` 中 5 条本体论公理，为框架出发点）
 - **定理总数**：从 426 → 624（+198 个严格证明的定理），Superconductivity 库从 119 → 317（+198）

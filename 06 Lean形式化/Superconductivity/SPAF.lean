@@ -872,8 +872,11 @@ theorem neutronDefectCartan_phys_posDef {delta : ℝ} (hδ : 0 < delta ∧ delta
   apply neutronDefectCartan_posDef_of_lt_sqrt_eight_thirds
   rw [abs_of_nonneg hδ.1.le]
   have hsq : delta ^ 2 < 1 := by nlinarith [hδ.1, hδ.2]
-  have h83 : (1 : ℝ) < 8 / 3 := by norm_num
-  linarith
+  have h_sqrt : (1 : ℝ) < Real.sqrt (8 / 3) := by
+    have h83 : (1 : ℝ) ^ 2 < 8 / 3 := by norm_num
+    have hnn : (0 : ℝ) ≤ 8 / 3 := by norm_num
+    nlinarith [Real.sqrt_nonneg (8 / 3), Real.sq_sqrt hnn]
+  exact lt_trans hδ.2 h_sqrt
 
 /-! ## N2 微扰质量：δ = 1 质子极限附近的谱体积展开 -/
 

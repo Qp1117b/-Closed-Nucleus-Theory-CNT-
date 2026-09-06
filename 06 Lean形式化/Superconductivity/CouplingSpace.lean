@@ -1,4 +1,4 @@
-﻿import Mathlib.Data.Real.Basic
+import Mathlib.Data.Real.Basic
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.NumberTheory.LSeries.RiemannZeta
 import Mathlib.Tactic
@@ -38,8 +38,11 @@ noncomputable def properTimeFlow (beta delta : ℝ) : ℝ := Real.sqrt (1 - beta
 noncomputable def properTimeFlow_pos {beta delta : ℝ}
     (hbeta : beta > 0) (hdelta : 0 ≤ delta) (hbound : delta < 1 / beta) :
     properTimeFlow beta delta > 0 := by
-  simp [properTimeFlow]
-  have h_inner : 0 < 1 - beta * delta := by nlinarith
+  have h_beta_delta : beta * delta < 1 := by
+    have h : beta * delta < beta * (1 / beta) := mul_lt_mul_of_pos_left hbound hbeta
+    rw [mul_div_cancel₀ 1 hbeta.ne'] at h
+    exact h
+  have h_inner : 0 < 1 - beta * delta := by linarith
   exact Real.sqrt_pos.mpr h_inner
 
 /-! ## 2. 耦合空间海森堡代数与耦合动量 -/
@@ -77,7 +80,7 @@ noncomputable def uncertaintyThreshold (beta delta C : ℝ) : ℝ :=
 noncomputable def uncertaintyThreshold_pos {beta delta C : ℝ}
     (hbeta : beta > 0) (hdelta : 0 ≤ delta) (hbound : delta < 1 / beta) (hC : C > 0) :
     uncertaintyThreshold beta delta C > 0 :=
-  mul_pos hC (div_pos (properTimeFlow_pos hbeta hdelta hbound) hbeta)
+  div_pos (mul_pos hC (properTimeFlow_pos hbeta hdelta hbound)) hbeta
 
 /-! ## 4. 库珀对作为精细结构常数跃迁（n=2 特例） -/
 
@@ -153,7 +156,8 @@ noncomputable def pureHydrogenNotSuperconducting (beta delta C dDelta : ℝ)
     curvatureFluctuationThreshold_pos hbeta hdelta hbound hC
   have hc : dDelta < curvatureFluctuationThreshold beta delta C := by
     rw [hzero_fluctuation]; exact hth_pos
-  show ¬(dDelta ≥ curvatureFluctuationThreshold beta delta C) from not_le_of_lt hc
+  show ¬(dDelta ≥ curvatureFluctuationThreshold beta delta C) from
+    fun h => by linarith
 
 /- 预言 2（文档级）：二维超导出现 $\zeta(2)$ 而非 $\zeta(3)$，比热/GL 系数含 $\pi^2/6$。 -/
 /- 预言 3（文档级）：缺陷密度调控 $T_c$（低密度增强、高密度破坏曲率涨落）。 -/

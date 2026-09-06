@@ -1,6 +1,7 @@
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 import FGChain.Synchronization
+import FGChain.CartanToShell
 
 /-!
 # FG 链路验收：实验可观测结果的第一性推导
@@ -14,8 +15,8 @@ import FGChain.Synchronization
 |:---|:---|:---|:---|
 | 氢原子能级 | E_n = −R/N(γ_n)²，N(γ_n) = 谱序号 | 本模块严格推导 | 里德伯公式（E_1 = −13.6 eV，精度 10⁻¹²，见《CQM_超导_专题与扩展》） |
 | 巴尔末系 | E_m − E_n = R(1/N_n² − 1/N_m²) | 本模块严格推导 | 氢光谱线系 |
-| 电子壳层容量 | 2(2l+1)：2, 6, 10, 14 | 本模块严格推导 | 元素周期表壳层结构 |
-| 周期长度（累积） | 2, 8, 18, 32 | 本模块严格推导 | Madelung 规则 |
+| 电子壳层容量 | 2(2l+1)：2, 6, 10, 14 | 本模块桥接 + `CartanToShell` Casimir 严格推导 | 元素周期表壳层结构 |
+| 周期长度（累积） | 2, 8, 18, 32 | 本模块桥接 + `CartanToShell` Casimir 严格推导 | Madelung 规则 |
 | 跃迁耦级谱 | Δu_n = 2 ln n（n = 2,4,6,…） | 本模块严格推导 | 库珀对电荷量子化（α→n²α） |
 | BCS 临界温度 | T_c = (2e^γ/π)·ω_D·exp(−1/λ) | 本模块正性 + 既有库 G13 闭合 | BCS 理论与实验 |
 
@@ -99,33 +100,74 @@ theorem balmerSeries (R : ℝ) (n m : ℕ) (hmn : n < m) :
   field_simp
   ring
 
-/-! ## 2. 电子壳层容量与周期长度（Madelung 规则） -/
+/-! ## 2. 电子壳层容量与周期长度（Madelung 规则）
 
-/-- **电子壳层容量**：角量子数 l 的壳层容量为 2(2l+1)
-    （自旋 2 态 × 磁量子数 2l+1 个取值；
-    A₄ 结合律锁定 s/p/d/f 四壳层并禁戒 g——l ≤ 3）。
+### 严格推导链（复用 `FGChain.CartanToShell`）
+
+壳层容量不再直接定义，而是从 A₄ 嘉当矩阵经 Casimir 本征值严格推导：
+A₄ 嘉当矩阵 → Dynkin 图深度 → 壳层标签 l_k = k-1 →
+Casimir C_k = l_k(l_k+1) + 3/4 → 壳层容量 N_k = 2(2l_k+1)。
+详见 `FGChain.CartanToShell.shellCapacityFromCasimir`。 -/
+
+/-- **电子壳层容量**（验收层记号）：角量子数 l 的壳层容量为 2(2l+1)。
+    此处保留以 l 为参数的记号便于物理对照；
+    严格推导见 `FGChain.CartanToShell.shellCapacityFromCasimir`，
+    桥接定理 `shellCapacity_eq_casimir` 确认两者一致。
     出处：《CQM_核心_共形场论与OPE》"$A_4$结合律锁定s,p,d,f，禁戒g"、
     `CQM_超导_专题与扩展.md` §11.7 壳层饱和数 2,6,10,14。 -/
 def shellCapacity (l : ℕ) : ℕ := 2 * (2 * l + 1)
 
-/-- s/p/d/f 壳层容量：2, 6, 10, 14（与周期表一致）。 -/
+/-- **Casimir 桥接定理**：以角量子数 l 为参数的 `shellCapacity l`
+    等于以壳层序号 k = l+1 为参数的 `shellCapacityFromCasimir (l+1)`，
+    后者从 A₄ 嘉当矩阵 → Casimir 本征值严格推导。
+    这确认验收层记号与严格推导层的一致性。 -/
+theorem shellCapacity_eq_casimir (l : ℕ) :
+    shellCapacity l = shellCapacityFromCasimir (l + 1) := by
+  unfold shellCapacity shellCapacityFromCasimir shellLabel
+  omega
+
+/-- s/p/d/f 壳层容量：2, 6, 10, 14（与周期表一致）。
+    值由 `FGChain.CartanToShell.shellCapacityFromCasimir_values` 经
+    `shellCapacity_eq_casimir` 桥接给出。 -/
 theorem shellCapacity_values :
     shellCapacity 0 = 2 ∧ shellCapacity 1 = 6 ∧ shellCapacity 2 = 10 ∧
     shellCapacity 3 = 14 := by
-  refine ⟨rfl, rfl, rfl, rfl⟩
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · rw [shellCapacity_eq_casimir]; exact shellCapacityFromCasimir_values.1
+  · rw [shellCapacity_eq_casimir]; exact shellCapacityFromCasimir_values.2.1
+  · rw [shellCapacity_eq_casimir]; exact shellCapacityFromCasimir_values.2.2.1
+  · rw [shellCapacity_eq_casimir]; exact shellCapacityFromCasimir_values.2.2.2
 
 /-- **周期长度（累积填充数）**：前 k 个壳层的累积电子数。
-    累积序列 2, 8, 18, 32 对应周期表各行长度（Madelung 规则）。 -/
+    累积序列 2, 8, 18, 32 对应周期表各行长度（Madelung 规则）。
+    严格推导见 `FGChain.CartanToShell.cumulativePeriodLength`，
+    桥接定理 `cumulativeLength_eq_period` 确认两者一致。 -/
 def cumulativeLength : ℕ → ℕ
   | 0 => 0
   | (k + 1) => cumulativeLength k + shellCapacity k
 
-/-- 周期长度：2, 8, 18, 32（与周期表一致）。 -/
+/-- **累积长度桥接定理**：`cumulativeLength k = cumulativePeriodLength k`，
+    后者从 Casimir 严格推导。 -/
+theorem cumulativeLength_eq_period : ∀ k : ℕ,
+    cumulativeLength k = cumulativePeriodLength k := by
+  intro k
+  induction k with
+  | zero => rfl
+  | succ n ih =>
+    unfold cumulativeLength cumulativePeriodLength
+    rw [ih, shellCapacity_eq_casimir n]
+
+/-- 周期长度：2, 8, 18, 32（与周期表一致）。
+    值由 `FGChain.CartanToShell.cumulativePeriodLength_values` 经
+    `cumulativeLength_eq_period` 桥接给出。 -/
 theorem cumulativeLength_values :
     cumulativeLength 1 = 2 ∧ cumulativeLength 2 = 8 ∧ cumulativeLength 3 = 18 ∧
     cumulativeLength 4 = 32 := by
-  simp only [cumulativeLength, shellCapacity]
-  norm_num
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · rw [cumulativeLength_eq_period 1]; exact cumulativePeriodLength_values.1
+  · rw [cumulativeLength_eq_period 2]; exact cumulativePeriodLength_values.2.1
+  · rw [cumulativeLength_eq_period 3]; exact cumulativePeriodLength_values.2.2.1
+  · rw [cumulativeLength_eq_period 4]; exact cumulativePeriodLength_values.2.2.2
 
 /-! ## 3. 跃迁耦级谱：Δu_n = 2 ln n -/
 
@@ -183,8 +225,10 @@ theorem bcsTcFormula_pos (omegaD lam : ℝ) (hω : 0 < omegaD) (hλ : 0 < λ) :
     承载以下第一性可观测预言：
     1. 氢原子能级 E_n = −R/N(γ_n)²（里德伯公式，`hydrogenLevel_gap`、
        `balmerSeries`）；
-    2. 壳层容量 2(2l+1) 与周期长度 2, 8, 18, 32（`shellCapacity_values`、
-       `cumulativeLength_values`）；
+    2. 壳层容量 2(2l+1) 与周期长度 2, 8, 18, 32——从 A₄ 嘉当矩阵经
+       Casimir 本征值严格推导（`FGChain.CartanToShell.cartan_to_shell_complete`），
+       经 `shellCapacity_eq_casimir`、`cumulativeLength_eq_period` 桥接至
+       验收层（`shellCapacity_values`、`cumulativeLength_values`）；
     3. 跃迁耦级谱 Δu_n = 2 ln n 与资格条件阈值（`transitionCoupling_pos`、
        `transitionCriterion_general`）；
     4. BCS 临界温度正性与精确常数 2e^γ/π（`bcsTcFormula_pos`；

@@ -101,27 +101,27 @@ theorem chain_separation (B : ChainBSpectral) (s : ℝ)
       (∀ v, c₁.deficits v = c₂.deficits v) ∧
       c₁.cells ⟨0, by omega⟩ ⟨0, by omega⟩ ≠ c₂.cells ⟨0, by omega⟩ ⟨0, by omega⟩ ∧
       c₁.deficits ⟨0, by omega⟩ = s := by
-  refine ⟨⟨fun _ _ => 0, fun _ => 2 * Real.pi, fun v => by
-      simp only [ChainAGeometric.generated, Finset.sum_const, Finset.card_univ, Fintype.card_fin]
-      ring⟩,
-    ⟨fun _ i => if i = 0 then (1 : ℝ) else if i = 1 then -1 else 0,
-      fun _ => 2 * Real.pi, fun v => by
-      simp only [ChainAGeometric.generated, Finset.sum_const, Finset.card_univ, Fintype.card_fin]
-      have : ∑ i, (if i = 0 then (1 : ℝ) else if i = 1 then -1 else 0) = 0 := by
-        simp [Fin.sum_univ_four]
-        ring
-      rw [this]; ring⟩,
-    fun v => by simp only [ChainAGeometric.deficits]; rfl, ?_, by simp only [ChainAGeometric.deficits]⟩
-  · intro hcon
-    simp only at hcon
-    exact zero_ne_one hcon
+  refine ⟨
+    ⟨fun _ i => if i = 0 then 2 * Real.pi - s else 0, fun _ => s, fun v => by
+      show s = 2 * Real.pi - ∑ i : Fin 4, (if i = 0 then 2 * Real.pi - s else (0 : ℝ))
+      rw [Fin.sum_univ_four]; simp⟩,
+    ⟨fun _ i => if i = 0 then 2 * Real.pi - s + 1 else if i = 1 then -1 else 0,
+      fun _ => s, fun v => by
+      show s = 2 * Real.pi - ∑ i : Fin 4,
+        (if i = 0 then 2 * Real.pi - s + 1 else if i = 1 then (-1 : ℝ) else 0)
+      rw [Fin.sum_univ_four]; simp⟩,
+    fun v => rfl, ?_, rfl⟩
+  · intro h
+    simp at h
 
-/-- 链A 角亏可实现性：非负二面角与 2π 界下角亏可落入任意给定谱约束（若约束为真值类）。 -/
+
+/-- 链A 角亏可实现性：非负二面角且二面角总和不超过 2π 时角亏非负且不超过 2π。 -/
 theorem chainA_deficit_bounded {n : ℕ} (c : ChainAGeometric n) (v : Fin n)
-    (hθ : ∀ i, 0 ≤ c.cells v i) : 0 ≤ c.deficits v ∧ c.deficits v ≤ 2 * Real.pi := by
+    (hθ : ∀ i, 0 ≤ c.cells v i)
+    (hsum_le : ∑ i, c.cells v i ≤ 2 * Real.pi) :
+    0 ≤ c.deficits v ∧ c.deficits v ≤ 2 * Real.pi := by
   refine ⟨?_, c.deficit_le_twoPi v hθ⟩
   rw [c.generated v]
-  have hsum : (0 : ℝ) ≤ ∑ i, c.cells v i := Finset.sum_nonneg fun i _ => hθ i
   linarith
 
 end CQM.FGChain

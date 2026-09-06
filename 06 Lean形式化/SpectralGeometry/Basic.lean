@@ -207,6 +207,10 @@ theorem firstCoupling_gt_100 : firstCoupling > 100 := by
     如果此定理被证明，则 CQM 与黎曼假设直接关联。 -/
 noncomputable def sierraCQMTheorem (_n : ℕ) (γ_n : ℝ) : ℝ := 1/4 + γ_n^2
 
+/-- 第一个黎曼零点的高度 γ₁ ≈ 14.1347251417。
+    来源：ζ(1/2 + iγ₁) = 0 的最小正解。 -/
+noncomputable def riemannZero1 : ℝ := 14.1347251417
+
 /-- Sierra-CQM 定理的数值验证：n=1, γ₁ = 14.1347251417 -/
 noncomputable def sierraCQM_n1 : ℝ := sierraCQMTheorem 1 riemannZero1
 
@@ -419,9 +423,6 @@ theorem spectralQuantum_pos_ref : spectralQuantum > 0 :=
     如果 CQM 耦谱方程 ∏_p F_p(s) = 1 的解与黎曼零点重合，
     则 RH 自动成立。 -/
 
-/-- 第一个黎曼零点的高度 γ₁ ≈ 14.1347251417。
-    来源：ζ(1/2 + iγ₁) = 0 的最小正解。 -/
-noncomputable def riemannZero1 : ℝ := 14.1347251417
 
 /-- 第二个黎曼零点的高度 γ₂ ≈ 21.0220396388 -/
 noncomputable def riemannZero2 : ℝ := 21.0220396388

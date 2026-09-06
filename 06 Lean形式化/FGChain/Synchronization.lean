@@ -1,5 +1,5 @@
 import Mathlib.Data.Real.Basic
-import Mathlib.Topology.Instances.Real
+import Mathlib.Topology.Instances.Real.Lemmas
 import Mathlib.Topology.Order.IntermediateValue
 import Mathlib.Tactic
 import FGChain.FiberBundle
