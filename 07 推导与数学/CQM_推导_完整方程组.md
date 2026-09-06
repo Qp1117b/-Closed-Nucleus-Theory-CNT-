@@ -266,7 +266,7 @@ $$\boxed{\alpha^{-1} = 2^{14} \cdot 3^{-1} \cdot 5^{-3} \cdot \pi = \frac{16384\
 
 ### 10.2 引力常数
 
-$$\boxed{G_N^{(0)} = \frac{I\cdot\lambda_c\cdot C^2\cdot E_1}{m_p^2}\cdot\exp\left(-\frac{2}{C}\right)} \tag{Q2}$$
+$$\boxed{G_N^{(0)} = \frac{I\cdot\lambda_c\cdot C^2\cdot \mathfrak{c}_1}{m_p^2}\cdot\exp\left(-\frac{2}{C}\right)} \tag{Q2}$$
 
 $$\boxed{G_N = G_N^{(0)}\cdot(1+\kappa C)}, \quad \kappa = \frac{31 + C}{30} \tag{Q3}$$
 
@@ -337,6 +337,6 @@ $$\boxed{S_{\text{eff}}[g, \psi, A] = \frac{1}{16\pi G_N} \int d^4x \sqrt{-g} \,
 
 $$\boxed{\hat{\mu}^2=\hat{\mu}, \quad \hat{\mu}=\frac{I+R}{2}}$$
 
-$$\boxed{E_0 = \frac{c^2}{4}, \qquad G_N=\frac{I\lambda_c C^2 E_1}{m_p^2}e^{-2/C}\bigl(1+\kappa C\bigr)}$$
+$$\boxed{E_0 = \frac{c^2}{4}, \qquad G_N=\frac{I\lambda_c C^2 \mathfrak{c}_1}{m_p^2}e^{-2/C}\bigl(1+\kappa C\bigr)}$$
 
 **完整严格推导链**：`CQM_推导_经典路径.md`

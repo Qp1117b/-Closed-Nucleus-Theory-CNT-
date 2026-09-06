@@ -81,7 +81,7 @@ $$G_{\mu\nu} = 8\pi G_N\langle T_{\mu\nu}\rangle$$
 
 $G_N$ 的谱公式：
 
-$$G_N = \frac{I\cdot\lambda_c\cdot C^2\cdot E_1}{m_p^2}\cdot\exp\left(-\frac{2}{C}\right)\cdot(1+\kappa C),\quad \kappa = \frac{31+C}{30}$$
+$$G_N = \frac{I\cdot\lambda_c\cdot C^2\cdot \mathfrak{c}_1}{m_p^2}\cdot\exp\left(-\frac{2}{C}\right)\cdot(1+\kappa C),\quad \kappa = \frac{31+C}{30}$$
 
 全部因子来自谱几何与群论，无一自由参数。
 

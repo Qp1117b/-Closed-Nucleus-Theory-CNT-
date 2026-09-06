@@ -29,7 +29,7 @@
 - 电荷离散化（$1/3$ 整数倍）
 - 三代结构截断 $m \leq 3$
 
-所有结果均从数学结构先验推出，无任意可调参数。仅质子质量标度 $m_p$ 为唯一量纲实验输入（$\alpha_s(M_Z)$ 后验自洽验证，非自由参数）。全部由纯数学结构（$C, E_1, \lambda_c, I, W_m, N_{\text{cycle}}, q_c, \exp(-2/C), \kappa$）确定。$E_n$ 谱公式（定理 4.1）在框架内构造后验校验。$\delta\theta_W^{(1)}$ 由 $\Delta_{\text{RGE}} + \delta_{\text{CQM}}$ 给出（$\Delta_{\text{RGE}} = -0.0433$ 标准SU(5) 1-loop, $\delta_{\text{CQM}} = -C(1+1/N_{\text{cycle}})\ln(M_{\text{GUT}}/M_Z)/(2\pi) = -0.1130$），属框架内构造后验校验，待第三方独立复现。$\rho_2, \rho_3$ 从 Mathieu 波函数重叠积分 + SU(5) 群论归一化给出（$\rho_2 = 0.19907$, 残差 <0.03%; $\rho_3 = 0.10197$, 残差 0.32%）。$G_N$ $\kappa = (31+C)/30 = 1.034103$，偏差 **约 −3 ppm**（`CQM_推导_完整方程组.md` §10.2）。
+所有结果均从数学结构先验推出，无任意可调参数。仅质子质量标度 $m_p$ 为唯一量纲实验输入（$\alpha_s(M_Z)$ 后验自洽验证，非自由参数）。全部由纯数学结构（$C, \mathfrak{c}_1, \lambda_c, I, W_m, N_{\text{cycle}}, q_c, \exp(-2/C), \kappa$）确定。$E_n$ 谱公式（定理 4.1）在框架内构造后验校验。$\delta\theta_W^{(1)}$ 由 $\Delta_{\text{RGE}} + \delta_{\text{CQM}}$ 给出（$\Delta_{\text{RGE}} = -0.0433$ 标准SU(5) 1-loop, $\delta_{\text{CQM}} = -C(1+1/N_{\text{cycle}})\ln(M_{\text{GUT}}/M_Z)/(2\pi) = -0.1130$），属框架内构造后验校验，待第三方独立复现。$\rho_2, \rho_3$ 从 Mathieu 波函数重叠积分 + SU(5) 群论归一化给出（$\rho_2 = 0.19907$, 残差 <0.03%; $\rho_3 = 0.10197$, 残差 0.32%）。$G_N$ $\kappa = (31+C)/30 = 1.034103$，偏差 **约 −3 ppm**（`CQM_推导_完整方程组.md` §10.2）。
 
 ---
 
@@ -544,7 +544,7 @@ $$\boxed{g_s^{\text{IR}} = \sqrt{I \cdot \lambda_c} \approx \sqrt{\frac{5}{3} \t
 ### 10.5 $\Lambda_{\text{QCD}}$ 的先验公式
 
 **定理 10.2**：
-$$\boxed{\Lambda_{\text{QCD}} = \frac{m_p}{C \cdot E_1} = \frac{m_p}{C\left(\frac14 + \gamma_1^2\right)}}$$
+$$\boxed{\Lambda_{\text{QCD}} = \frac{m_p}{C \cdot \mathfrak{c}_1} = \frac{m_p}{C\left(\frac14 + \gamma_1^2\right)}}$$
 
 **数值**：$\Lambda_{\text{QCD}} \approx 0.203$ GeV $= 203$ MeV（其中 $m_p = 0.938$ GeV 代入，结果乘以 $10^3$ 转换为 MeV），与标准 $\overline{\text{MS}}$ 值 210 MeV 偏差 −3.3%。
 
@@ -573,14 +573,14 @@ $$\boxed{\mathcal{J} = \exp\left(-\frac{2}{C}\right)}$$
 ### 10.7 $G_N$ 的完整公式
 
 **定理 10.4**：
-$$\boxed{G_N = \frac{I \cdot \lambda_c \cdot C^2 \cdot E_1}{m_p^2} \cdot \exp\left(-\frac{2}{C}\right) \cdot \left(1 + \frac{31 + C}{30} \cdot C\right)}$$
+$$\boxed{G_N = \frac{I \cdot \lambda_c \cdot C^2 \cdot \mathfrak{c}_1}{m_p^2} \cdot \exp\left(-\frac{2}{C}\right) \cdot \left(1 + \frac{31 + C}{30} \cdot C\right)}$$
 
 其中 $\kappa = (31+C)/30 = 1.034103$（详见 `CQM_推导_完整方程组.md` §10.2）。
 
 **数值**：$G_N \approx 6.71 \times 10^{-39}$ GeV$^{-2}$，与实验值 $6.71\times10^{-39}$ 偏差约 $\mathbf{-3\,ppm}$。
 
 **等价形式**：
-$$G_N = \frac{(g_s^{\text{IR}})^2 \cdot C^2 \cdot E_1}{m_p^2} \cdot \exp\left(-\frac{2}{C}\right) \cdot \left(1 + \frac{31 + C}{30} \cdot C\right) = \frac{20\, q_c\, C^2\, E_1}{3\, m_p^2} \exp\left(-\frac{2}{C}\right) \left(1 + \frac{31 + C}{30} \cdot C\right)$$
+$$G_N = \frac{(g_s^{\text{IR}})^2 \cdot C^2 \cdot \mathfrak{c}_1}{m_p^2} \cdot \exp\left(-\frac{2}{C}\right) \cdot \left(1 + \frac{31 + C}{30} \cdot C\right) = \frac{20\, q_c\, C^2\, \mathfrak{c}_1}{3\, m_p^2} \exp\left(-\frac{2}{C}\right) \left(1 + \frac{31 + C}{30} \cdot C\right)$$
 
 **各因子来源**：
 | 因子 | 来源 | 类型 |
@@ -588,7 +588,7 @@ $$G_N = \frac{(g_s^{\text{IR}})^2 \cdot C^2 \cdot E_1}{m_p^2} \cdot \exp\left(-\
 | $20/3 = I \cdot 4$ | $I=5/3$（Dynkin 嵌入，定理 10.1）$\times$ 4（来自 $\lambda_c=4q_c$） | 群论定理 |
 | $q_c$ | 连分数方程最小正根（定理 10.3） | 解析方程 |
 | $C = \xi'(1)/\xi(1)$ | 解析恒等式（定理 4.3） | 数论定理 |
-| $E_1 = \rho_1(1-\rho_1) = \tfrac14 + \gamma_1^2$ | 壳层双曲Laplacian H=D²+1/4 本征值（定理 4.1, 严格第一性） | 双曲几何导出 |
+| $\mathfrak{c}_1 = \rho_1(1-\rho_1) = \tfrac14 + \gamma_1^2$ | 壳层双曲Laplacian H=D²+1/4 本征值（定理 4.1, 严格第一性） | 双曲几何导出 |
 | $\exp(-2/C)$ | Adele 全局归一化（定理 10.X） | 几何-数论条件 |
 | $(1+\kappa C)$ | 4-单纯形面元数 + Adele 周期（`CQM_推导_完整方程组.md` §10.2） | 组合涌出 |
 
@@ -683,9 +683,9 @@ $$\partial_\tau \Psi + C \sqrt{g_1^2+g_2^2+g_3^2} \sum_{i=1}^3 g_i \partial_{g_i
 |------|------|------|------|
 | $C$ | 0.023095708966 | $\xi'(1)/\xi(1)$ | — |
 | $L$ | $\pi/2$ | Berry-Keating 单位胞 | — |
-| $E_1$ | 200.0405... | 定理 4.1（第一性，$1/4+\gamma_1^2$） | — |
+| $\mathfrak{c}_1$ | 200.0405... | 定理 4.1（第一性，$1/4+\gamma_1^2$） | — |
 | $\gamma_1$ | 14.134725... | 第一个黎曼零点 | — |
-| $C_\theta$ | $1.1546 \times 10^{-4}$ | $C/E_1$ | — |
+| $C_\theta$ | $1.1546 \times 10^{-4}$ | $C/\mathfrak{c}_1$ | — |
 | $\sin^2\theta_W(\text{GUT})$ | 0.375 | 纯群论 | — |
 | $\sin^2\theta_W(M_Z)$ | 0.2311892176 | 角向精确修正 | 绝对偏差 $1.08 \times 10^{-5}$ |
 | $M_{\text{GUT}}$ | $7.6 \times 10^{14}$ GeV | 反向预言 | — |
