@@ -276,7 +276,7 @@ $$\boxed{\Delta m = 2\theta_4\cdot C^2\cdot m_p\cdot\left[1-\alpha_5(C)C\right]}
 
 ### 10.4 中子寿命
 
-$$\boxed{\tau = \frac{e^{-u_0}(1-1/e)\hbar}{C\varepsilon m_p}, \quad u_0 = -\sqrt{\frac{E_1^{\text{eff}}}{\pi C}}} \tag{Q5}$$
+$$\boxed{\tau = \frac{e^{-u_0}(1-1/e)\hbar}{C\varepsilon m_p}, \quad u_0 = -\sqrt{\frac{\mathfrak{c}_1^{\text{eff}}}{\pi C}}} \tag{Q5}$$
 
 | 方程 | 状态 | 备注 |
 |:---|:---:|:---|

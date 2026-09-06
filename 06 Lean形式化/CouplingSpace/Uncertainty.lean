@@ -236,7 +236,7 @@ theorem cqm_uncertainty_from_robertson (ψ : H) (hψ : ‖ψ‖ = 1)
   robertson_ccr_inequality ψ hψ uHat pHat hu hp hCCR
 
 /-- 无量纲化不确定性关系：
-    定义 ũ = û/C（C > 0 为谱量子），则 Δũ · Δp̂ᵤ ≥ 1/(2C)。
+    定义 ũ = û/C（C > 0 为相变量子），则 Δũ · Δp̂ᵤ ≥ 1/(2C)。
 
     证明：Δũ = Δû/C（因为 stdDev 是 1-齐次的），
     所以 Δũ · Δp̂ᵤ = (Δû/C) · Δp̂ᵤ ≥ (1/2)/C = 1/(2C)。 -/

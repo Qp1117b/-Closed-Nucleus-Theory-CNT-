@@ -3,7 +3,7 @@ import Mathlib.Analysis.SpecialFunctions.Exp.Deriv
 import SpectralGeometry.Basic
 import SpectralGeometry.RiemannXi
 
-/-! # GL(n) 平凡自守表示的谱量子普适性
+/-! # GL(n) 平凡自守表示的相变量子普适性
 
 ## 核心结论
 
@@ -11,12 +11,12 @@ import SpectralGeometry.RiemannXi
 
 1. **完成 L 函数**：Λ_n(s) = Λ_1(s)^n，其中 Λ_1(s) = Γ_ℝ(s)·ζ(s) 是 GL(1) 完成 L 函数
 2. **零点完全相同**：Λ_n(s) 的零点与 Λ_1(s) 完全相同，仅重数乘以 n
-3. **谱量子缩放律**：C_n = Λ_n'(1)/Λ_n(1) = n·C_1
+3. **相变量子缩放律**：C_n = Λ_n'(1)/Λ_n(1) = n·C_1
 4. **归一化普适性**：C_n / n = C_1 对所有 n ≥ 1 成立
 
 ## 物理意义
 
-- C = C_1 ≈ 0.023096 是跨所有 GL(n) 的**普适谱量子单位**
+- C = C_1 ≈ 0.023096 是跨所有 GL(n) 的**普适相变量子单位**
 - GL(n) 各层的层级因子按 exp(-2/C)^{1/n} 缩放
 - GL(5) 平凡分支给出 C_5 = 5C，与 SU(5) 秩 4+1 结构吻合
 - 低层 GL(n) 主导物理（层级抑制最强）
@@ -24,7 +24,7 @@ import SpectralGeometry.RiemannXi
 ## 限制
 
 以上结论仅对**平凡自守形式**成立。非平凡自守形式（如 CM 椭圆曲线）
-的 L 函数零点不同，谱量子也不同（如 GL(2) rank=0 曲线 C_f = 0）。
+的 L 函数零点不同，相变量子也不同（如 GL(2) rank=0 曲线 C_f = 0）。
 -/
 
 noncomputable section
@@ -55,7 +55,7 @@ theorem completedLn_eq_power (n : ℕ) (s : ℝ) :
     completedLn n s = completedL1 s ^ n := by
   unfold completedLn; rfl
 
-/-! ## 2. 谱量子缩放律 C_n = n·C_1
+/-! ## 2. 相变量子缩放律 C_n = n·C_1
 
 由 Λ_n(s) = Λ_1(s)^n，对数导数：
   Λ_n'(s)/Λ_n(s) = n · Λ_1'(s)/Λ_1(s)
@@ -64,11 +64,11 @@ theorem completedLn_eq_power (n : ℕ) (s : ℝ) :
   C_n = Λ_n'(1)/Λ_n(1) = n · Λ_1'(1)/Λ_1(1) = n · C_1
 -/
 
-/-- GL(n) 平凡表示的谱量子 C_n := Λ_n'(1)/Λ_n(1) -/
+/-- GL(n) 平凡表示的相变量子 C_n := Λ_n'(1)/Λ_n(1) -/
 noncomputable def spectralQuantumGLn (n : ℕ) (Λ1_val Λ1_deriv : ℝ) : ℝ :=
   n * (Λ1_deriv / Λ1_val)
 
-/-- GL(1) 谱量子 C_1 = Λ_1'(1)/Λ_1(1) = C（与 spectralQuantum 一致） -/
+/-- GL(1) 相变量子 C_1 = Λ_1'(1)/Λ_1(1) = C（与 spectralQuantum 一致） -/
 theorem spectralQuantumGL1_eq_spectralQuantum (Λ1_val Λ1_deriv : ℝ)
     (h : Λ1_deriv / Λ1_val = spectralQuantum) :
     spectralQuantumGLn 1 Λ1_val Λ1_deriv = spectralQuantum := by
@@ -76,9 +76,9 @@ theorem spectralQuantumGL1_eq_spectralQuantum (Λ1_val Λ1_deriv : ℝ)
   rw [Nat.cast_one, one_mul]
   exact h
 
-/-- **主定理：谱量子缩放律 C_n = n·C_1**
+/-- **主定理：相变量子缩放律 C_n = n·C_1**
 
-GL(n) 平凡自守表示的谱量子是 GL(1) 谱量子的 n 倍。 -/
+GL(n) 平凡自守表示的相变量子是 GL(1) 相变量子的 n 倍。 -/
 theorem spectralQuantumGLn_eq_n_times_C1 (n : ℕ) (Λ1_val Λ1_deriv : ℝ)
     (h_Λ1_nezero : Λ1_val ≠ 0)
     (h_C1 : Λ1_deriv / Λ1_val = spectralQuantum) :
@@ -86,9 +86,9 @@ theorem spectralQuantumGLn_eq_n_times_C1 (n : ℕ) (Λ1_val Λ1_deriv : ℝ)
   unfold spectralQuantumGLn
   rw [h_C1]
 
-/-- **推论：归一化谱量子 C_n/n = C_1 普适**
+/-- **推论：归一化相变量子 C_n/n = C_1 普适**
 
-对所有 n ≥ 1，C_n / n = C_1 = C，即 C 是跨 GL(n) 的普适谱量子单位。 -/
+对所有 n ≥ 1，C_n / n = C_1 = C，即 C 是跨 GL(n) 的普适相变量子单位。 -/
 theorem normalized_spectralQuantum_universal (n : ℕ) (hn : n > 0)
     (Λ1_val Λ1_deriv : ℝ)
     (h_Λ1_nezero : Λ1_val ≠ 0)
@@ -157,7 +157,7 @@ GL(5) 平凡表示给出 C_5 = 5·C ≈ 0.11548。
   - C_5 = 5·C₁ 恰好对应 5 个顶点/5 个基本表示
 -/
 
-/-- GL(5) 平凡表示谱量子 C_5 = 5·C -/
+/-- GL(5) 平凡表示相变量子 C_5 = 5·C -/
 theorem spectralQuantumGL5_eq_5C (Λ1_val Λ1_deriv : ℝ)
     (h_Λ1_nezero : Λ1_val ≠ 0)
     (h_C1 : Λ1_deriv / Λ1_val = spectralQuantum) :

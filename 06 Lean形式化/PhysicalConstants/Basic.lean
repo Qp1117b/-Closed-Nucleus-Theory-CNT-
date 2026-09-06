@@ -18,7 +18,7 @@ CQM 从第一性原理推导物理常数。
 ## 公理与假设
 - **[EXPERIMENTAL INPUT]** 质子质量 m_p（唯一实验输入）
 - **[AXIOM A2.1]** 嘉当矩阵 A₄
-- **[AXIOM A2.2]** 谱量子 C
+- **[AXIOM A2.2]** 相变量子 C
 - **[HYPOTHESIS H3.3]** 退相干稳态 = 正四单纯形
 
 ## 核心公式
@@ -57,7 +57,7 @@ theorem protonMass_unit : protonMass = 0.93827208816 := by
     参数来源：
     - I = 5/3              ← CartanAlgebra（Dynkin 指数，从 A₄ 导出）
     - λ_c = 4q_c           ← SpectralGeometry（Mathieu 临界值，q_c 是连分数方程在 (0,1/2) 内唯一解）
-    - C = 0.02309570897    ← SpectralGeometry（谱量子，从 ξ'(1)/ξ(1) 导出）
+    - C = 0.02309570897    ← SpectralGeometry（相变量子，从 ξ'(1)/ξ(1) 导出）
     - 𝔠₁ = 200.04045483    ← SpectralGeometry（第一耦级，从黎曼零点导出）
     - κ = (31+C)/30        ← SpectralGeometry（谱修正，从 4-单纯形 + Adele 周期导出）
     - m_p = 0.93827208816  ← （实验输入，唯一自由参数） -/
@@ -390,7 +390,7 @@ theorem hierarchyFactor_pos : hierarchyFactor > 0 := by
     │   ├── 本征值 λ₁:λ₂:λ₃:λ₄ ≠ 9:4:1（精确比待确定）
     │   ├── α⁻¹_SU(5) = 16384π/375（待从 A₄ 严格推导）
     │   └── Mathieu 参数 → λ_c
-    ├── A2.2: 谱量子 C = ξ'(1)/ξ(1)
+    ├── A2.2: 相变量子 C = ξ'(1)/ξ(1)
     │   ├── Sierra-CQM: 𝔠₁ = 1/4 + γ₁²（待从公理证明）
     │   └── κ = (31 + C)/30
     └── m_p（实验输入）
