@@ -69,7 +69,7 @@ $$\begin{aligned}
 
 $$(p\cdot h,\, f) \sim (p,\, h\cdot f),\quad \forall h \in H$$
 
-**$R$ 是重组产物**：给定母群 $G$ 和子群 $H$（$H \triangleleft G$，$G$、$H$ 均为紧致李群），重组产物 $R$ 是紧致李群。物理实例：磁通量子化（$U(1) \xleftrightarrow{Z_n} U(1)$）、整数自旋表示（$SU(2) \xleftrightarrow{Z_2} SO(3)$）、电荷量子化（$U(1)\times SU(N) \xleftrightarrow{Z_N} U(N)$）。
+**$R$ 是重组产物**：给定母群 $G$ 和子群 $H$（$H \triangleleft G$，$G$、$H$ 均为紧致李群），重组产物 $R$ 是紧致李群。物理实例：磁通量子化（$U(1) \xRightarrow{Z_n} U(1)$）、整数自旋表示（$SU(2) \xRightarrow{Z_2} SO(3)$）、电荷量子化（$U(1)\times SU(N) \xRightarrow{Z_N} U(N)$）。
 
 ### 1.5.4 核心对比
 
@@ -90,9 +90,9 @@ $$(p\cdot h,\, f) \sim (p,\, h\cdot f),\quad \forall h \in H$$
 
 两种框架是**同一纤维丛对象在不同能标/相下的两种视角**：
 
-**容器 → 重组（追问起源）**：从线丛 $L_2$（容器）追溯到 $U(1) \xleftrightarrow{Z_2} U(1)$（重组）——库珀对是 $Z_2$ 重组的产物。
+**容器 → 重组（追问起源）**：从线丛 $L_2$（容器）追溯到 $U(1) \xRightarrow{Z_2} U(1)$（重组）——库珀对是 $Z_2$ 重组的产物。
 
-**重组 → 容器（低能有效理论）**：重组实现完成后，$R$ 的伴丛成为新能标下的固定背景——$SO(3)$ 规范场论把 $SO(3)$-向量丛当作容器，忘记它来自 $SU(2) \xleftrightarrow{Z_2} SO(3)$。
+**重组 → 容器（低能有效理论）**：重组实现完成后，$R$ 的伴丛成为新能标下的固定背景——$SO(3)$ 规范场论把 $SO(3)$-向量丛当作容器，忘记它来自 $SU(2) \xRightarrow{Z_2} SO(3)$。
 
 $$\text{运动学} \xrightarrow{\text{追问 } H \text{ 的起源}} \text{动力学}$$
 
@@ -116,9 +116,9 @@ CQM以动力学（重组）框架为主视角的原因：
 **伴丛截面 = 序参量**：重组框架中，伴丛定义为 $E_{R} = P \times_G R \cong P/H$，其截面是映射 $\phi: M \to P/H$。在时空每一点 $x \in M$，$\phi(x)$ 是 $G/H$ 中的一个**陪集**，即一个**真空方向**——这正是序参量。
 
 实例（重组生成群 $R$，VEV 在 $V$ 中选方向）：
-- **电弱**：重组 $(SU(2)\times U(1)) \xleftrightarrow{Z_2} U(1)\times SO(3)$，VEV $\langle\phi\rangle\in V=\mathbb{C}^2$ 选方向，破缺至 $U(1)_{\text{em}}$，序参量 $\phi(x)\in (SU(2)\times U(1))/U(1)_{em} \sim S^3$
-- **超导**：重组 $U(1) \xleftrightarrow{Z_2} U(1)$，库珀对凝聚相位 $\phi(x) \in U(1)$
-- **铁磁体**：重组 $SO(3) \xleftrightarrow{\{e\}} SO(3)$，VEV $\langle\psi\rangle\in V=\mathbb{R}^3$ 选方向，破缺 $SO(3)\to SO(2)$，磁化方向 $\phi(x)\in SO(3)/SO(2) \sim S^2$
+- **电弱**：重组 $(SU(2)\times U(1)) \xRightarrow{Z_2} U(1)\times SO(3)$，VEV $\langle\phi\rangle\in V=\mathbb{C}^2$ 选方向，破缺至 $U(1)_{\text{em}}$，序参量 $\phi(x)\in (SU(2)\times U(1))/U(1)_{em} \sim S^3$
+- **超导**：重组 $U(1) \xRightarrow{Z_2} U(1)$，库珀对凝聚相位 $\phi(x) \in U(1)$
+- **铁磁体**：重组 $SO(3) \xRightarrow{\{e\}} SO(3)$，VEV $\langle\psi\rangle\in V=\mathbb{R}^3$ 选方向，破缺 $SO(3)\to SO(2)$，磁化方向 $\phi(x)\in SO(3)/SO(2) \sim S^2$
 
 在重组框架中，"物质场"就是背景自身通过重组折叠后涌现的截面。
 
@@ -165,17 +165,17 @@ $$\boxed{(M_\ell,\; P(M_\ell, G_\ell),\; \mathcal{A}_\ell,\; \hat{\mathcal{S}}_\
 | 联络 $\mathcal{A}_\ell$ | 由层级Regge晶胞分步生成 | 平行移动规则 |
 | 同步算符 $\hat{\mathcal{S}}_\ell$ | 紧化算符在层级截面空间的实现 | 谱算符，给出群谱 |
 
-### 2.0 主丛结构关系：$F = G \xleftrightarrow{} R = G \xleftrightarrow{} \hat{H}$
+### 2.0 主丛结构关系：$F = G \xRightarrow{} R = G \xRightarrow{} \hat{H}$
 
-**FG当前用于描述规范相变物理**。核心结构：CQM FG的主丛是从结构群到实现群（等价地到群算符）的重组实现，群算符是实现群在表示空间上的算符表示。箭头 $\xleftrightarrow{}$ 表示**重组实现**（$G$ 经重组实现为 $R$，等价地重组为 $\hat{H}$）。
+**FG当前用于描述规范相变物理**。核心结构：CQM FG的主丛是从结构群到实现群（等价地到群算符）的重组实现，群算符是实现群在表示空间上的算符表示。箭头 $\xRightarrow{}$ 表示**重组实现**（$G$ 经重组实现为 $R$，等价地重组为 $\hat{H}$）。
 
-$$\boxed{F = G \xleftrightarrow{} R = G \xleftrightarrow{} \hat{H}}$$
+$$\boxed{F = G \xRightarrow{} R = G \xRightarrow{} \hat{H}}$$
 
 其中：
 - $G$：**主丛结构群**（母群，如 $SU(5)$）
 - $R$：**实现群**（本征群，重组产物，公理1+2保证紧致性）
 - $\hat{H}$：**群算符**（$R$ 在表示空间上的算符表示，故 $R$ 与 $\hat{H}$ 在谱的意义下等价）
-- $F = G \xleftrightarrow{} R = G \xleftrightarrow{} \hat{H}$：**主丛**（结构群 $G$ 经重组实现为实现群 $R$，等价地重组为群算符 $\hat{H}$）
+- $F = G \xRightarrow{} R = G \xRightarrow{} \hat{H}$：**主丛**（结构群 $G$ 经重组实现为实现群 $R$，等价地重组为群算符 $\hat{H}$）
 
 **子群重组**：在规范相变中，$G$ 本身不变，内部以子群重组——$R$ 和 $\hat{H}$ 的谱是 $G$ 内部子群的谱（$\text{Spec}(R), \text{Spec}(\hat{H}) \subseteq \text{Spec}(G)$），但 $G$ 本身不变为子群。规范相变是 $G$ 的内部结构通过子群重新组织，不是 $G$ 重组为别的群。
 
@@ -190,19 +190,19 @@ $$\boxed{F = G \xleftrightarrow{} R = G \xleftrightarrow{} \hat{H}}$$
 
 **四层结构**：
 
-$$\underbrace{G,\; R}_{\text{1. 代数层}} \;\longrightarrow\; \underbrace{\hat{H}|\Psi\rangle = s|\Psi\rangle}_{\text{2. 算符层（类薛定谔）}} \;\longrightarrow\; \underbrace{F = G \xleftrightarrow{} R = G \xleftrightarrow{} \hat{H}}_{\text{3. 丛层（主丛）}} \;\hookrightarrow\; \underbrace{\text{运动学纤维丛}}_{\text{4. 运动学层}}$$
+$$\underbrace{G,\; R}_{\text{1. 代数层}} \;\longrightarrow\; \underbrace{\hat{H}|\Psi\rangle = s|\Psi\rangle}_{\text{2. 算符层（类薛定谔）}} \;\longrightarrow\; \underbrace{F = G \xRightarrow{} R = G \xRightarrow{} \hat{H}}_{\text{3. 丛层（主丛）}} \;\hookrightarrow\; \underbrace{\text{运动学纤维丛}}_{\text{4. 运动学层}}$$
 
 1. **代数层**：$G$（母群），$R$（实现群/本征群）
 2. **算符层**：$\hat{H}$（群算符，$R$ 的算符表示）→ 类薛定谔方程 $\hat{H}|\Psi\rangle = s|\Psi\rangle$
-3. **丛层**：$F = G \xleftrightarrow{} R = G \xleftrightarrow{} \hat{H}$（主丛，结构群 $G$ 经重组实现为实现群 $R$ 或群算符 $\hat{H}$）
+3. **丛层**：$F = G \xRightarrow{} R = G \xRightarrow{} \hat{H}$（主丛，结构群 $G$ 经重组实现为实现群 $R$ 或群算符 $\hat{H}$）
 4. **运动学层**：$F$ 作为主丛嵌入运动学纤维丛（§1.5.2容器框架），参与动力学
 
 **物理意义**：
 - $R = \hat{H}$：实现群 = 群算符（谱等价）——群论结构确定算符谱，算符谱反推群论结构
-- $F = G \xleftrightarrow{} R = G \xleftrightarrow{} \hat{H}$：主丛是结构群到实现群（等价地到群算符）的重组实现，物理态空间 $= \text{Im}(G \xleftrightarrow{} R)$
+- $F = G \xRightarrow{} R = G \xRightarrow{} \hat{H}$：主丛是结构群到实现群（等价地到群算符）的重组实现，物理态空间 $= \text{Im}(G \xRightarrow{} R)$
 - $F \hookrightarrow$ 运动学纤维丛：重组框架（动力学）的产物嵌入容器框架（运动学），实现§1.5.5的转化关系
 
-**CQM纤维丛理论描述的是规范相变物理**：$F = G \xleftrightarrow{} R = G \xleftrightarrow{} \hat{H}$ 的本质是规范相变。大统一群 $GL(5)$（约化李群，非紧致）本身是重组实现的，不是破缺的。**就物理相变而言：破缺的必须是非规范对称群（或更一般地，非规范对称性），但非规范对称群不一定破缺；重组实现的既可以是规范对称群，也可以是非规范对称群；而规范对称群相变必然是重组，而非破缺**。$GL(5,\mathbb{R})$ 的时空对称性若纳入规范群则必须破缺；紧致部分（如 $SU(5) \subset GL(5,\mathbb{C})$）的规范相变是重组实现，没有发生破缺。母群 $G$（高对称相/自由相）经重组实现为 $R$（低对称相/有序相），群算符 $\hat{H}$ 是重组后在表示空间中的算符残余。纤维丛刻画的是规范相变物理：主丛结构群 $G$ 是相变前的对称性，纤维 $R$ 是相变后的有序态空间，联络编码相变的局域触发机制，曲率表征相变的拓扑障碍（示性类、单极子）。§1.5.3的等价关系 $(p\cdot h, f) \sim (p, h\cdot f)$ 是规范相变的数学化——等价关系折叠高对称态空间为低对称相的轨道空间。
+**CQM纤维丛理论描述的是规范相变物理**：$F = G \xRightarrow{} R = G \xRightarrow{} \hat{H}$ 的本质是规范相变。大统一群 $GL(5)$（约化李群，非紧致）本身是重组实现的，不是破缺的。**就物理相变而言：破缺的必须是非规范对称群（或更一般地，非规范对称性），但非规范对称群不一定破缺；重组实现的既可以是规范对称群，也可以是非规范对称群；而规范对称群相变必然是重组，而非破缺**。$GL(5,\mathbb{R})$ 的时空对称性若纳入规范群则必须破缺；紧致部分（如 $SU(5) \subset GL(5,\mathbb{C})$）的规范相变是重组实现，没有发生破缺。母群 $G$（高对称相/自由相）经重组实现为 $R$（低对称相/有序相），群算符 $\hat{H}$ 是重组后在表示空间中的算符残余。纤维丛刻画的是规范相变物理：主丛结构群 $G$ 是相变前的对称性，纤维 $R$ 是相变后的有序态空间，联络编码相变的局域触发机制，曲率表征相变的拓扑障碍（示性类、单极子）。§1.5.3的等价关系 $(p\cdot h, f) \sim (p, h\cdot f)$ 是规范相变的数学化——等价关系折叠高对称态空间为低对称相的轨道空间。
 
 > **文献标注（规范对称性不破缺的外部依据）**：局域规范对称性不能自发破缺——Elitzur 定理（Elitzur 1975, *Phys. Rev. D* 12, 3978）；Higgs 相与禁闭区之间无热力学奇异线，规范对称性不作为相变序参量（Fradkin–Shenker 1979, *Phys. Rev. D* 19, 3682）。CQM 的重组实现立场与此定理相容：规范对称群相变是重组，而非破缺。
 
@@ -321,13 +321,13 @@ $$\text{Regge剖分} + [\hat{X},\hat{P}]=i\hbar \xrightarrow{\text{离散协变�
 - **CFT OPE**：同步本征态 $\otimes$ 耦合本征态 $\to$ 群本征态（共形固定点，Dirac方程=共形自举方程的CQM具体化）
 - **耦合常数**：$g_k = \alpha\exp(-(n_k-n_1)/n_1)$——是同步方程的**输出**，不是输入参数
 
-### 4.0.1 SU(5)重组实现↔A_4→4紧致本征群→4耦合常数
+### 4.0.1 SU(5)重组实现⇒A_4→4紧致本征群→4耦合常数
 
 SU(5)李代数$\mathfrak{su}_5$的根系为$A_4$型，重组实现产生两个独立效应：
 
 **规范重组**（不属于本征群效应，三个空间群直积，全紧致，**时间内禀没有群**）：
 
-$$\text{SU}(5) \;\xleftrightarrow{\text{规范重组}}\; U(1) \times SU(2) \times SU(3) \;\xrightarrow{g_{U(1)}}\; \alpha$$
+$$\text{SU}(5) \;\xRightarrow{\text{规范重组}}\; U(1) \times SU(2) \times SU(3) \;\xrightarrow{g_{U(1)}}\; \alpha$$
 
 **本征群效应**（同步方程本征群，全紧致）：
 
@@ -787,6 +787,6 @@ $$\boxed{\text{局域算符插入} + \text{整体同步规则（同一代数结�
 
 ### 9.10 相关文档
 
-- `FG_核心理论.md`：FG物理机制层（同步算符比丛作用量更根本的论证、SU(5)重组实现↔A₄→4耦合常数→α）
+- `FG_核心理论.md`：FG物理机制层（同步算符比丛作用量更根本的论证、SU(5)重组实现⇒A₄→4耦合常数→α）
 - `01 核心理论/CQM_核心_共形场论与OPE.md`：CFT一般理论（OPE、共形自举、Kac-Moody代数、共形块、指数映射与合流极限）
 - `01 核心理论/CQM_核心_因果网络同步理论.md`：因果网络同步理论（QG层紧化算符定义、黎曼结构→CNST七条提取、三种引力同步诠释）

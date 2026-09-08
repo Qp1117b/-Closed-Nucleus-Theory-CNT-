@@ -422,9 +422,9 @@ $$\left(I + \frac{i c A_4}{2a}\right)\psi^{n+1} = \left(I - \frac{i c A_4}{2a}\r
 
 ### 7.4 精细结构常数
 
-**来源**：SU(5)重组实现↔$U(1)$电磁群→$\alpha$。具体地，$M$ 本征值 $\{9,4,1\}$ 通过 $S_5$ 表示论与 SU(5) 规范群结构锁定组合不变量：
+**来源**：SU(5)重组实现⇒$U(1)$电磁群→$\alpha$。具体地，$M$ 本征值 $\{9,4,1\}$ 通过 $S_5$ 表示论与 SU(5) 规范群结构锁定组合不变量：
 
-$$\text{SU}(5) \;\xleftrightarrow{\text{重组实现}}\; U(1)\text{电磁群} \;\xrightarrow{\text{耦合常数}}\; \alpha$$
+$$\text{SU}(5) \;\xRightarrow{\text{重组实现}}\; U(1)\text{电磁群} \;\xrightarrow{\text{耦合常数}}\; \alpha$$
 
 $$\alpha^{-1} = \frac{16384\pi}{375} \approx 137.2583$$
 
@@ -432,7 +432,7 @@ $$\alpha^{-1} = \frac{16384\pi}{375} \approx 137.2583$$
 
 与实验值 $137.035999$（CODATA 2022）偏差约 $0.162\%$（≈1620 ppm），为一阶近似、待高阶修正。定位：这不是到 ppm 的精确符合，故**不能称"严格/精确"**；且 CQM 内部存在经弱混合角修正的不同结果（如 α⁻¹≈137.018、偏差 −131 ppm，见 `07 推导与数学/CQM_数学_SU5群论.md`），数值尚未收敛为唯一精确值；标准模型中 $\alpha$ 是需精密测量的输入参数，并无被主流接受的纯数论推导（[Trautman, arXiv:1411.4673](https://arxiv.org/abs/1411.4673)）；此处为 CQM 框架内的启发式构造匹配。
 
-**双路径交叉验证**：4-单纯形路径（$M = E^T E \to \{9,4,1\} \to P = 16384\pi/375 \to \alpha^{-1}$）给出 $\alpha^{-1} = 16384\pi/375$（启发式参考）。$\alpha$ 的严格来源是 SU(5)重组实现↔$U(1)$电磁群耦合常数，是GL(5)固定层级整体的反映（见 `07 推导与数学/CQM_数学_Adele纲领.md`）。
+**双路径交叉验证**：4-单纯形路径（$M = E^T E \to \{9,4,1\} \to P = 16384\pi/375 \to \alpha^{-1}$）给出 $\alpha^{-1} = 16384\pi/375$（启发式参考）。$\alpha$ 的严格来源是 SU(5)重组实现⇒$U(1)$电磁群耦合常数，是GL(5)固定层级整体的反映（见 `07 推导与数学/CQM_数学_Adele纲领.md`）。
 
 ### 7.5 牛顿引力常数
 
@@ -821,7 +821,7 @@ $$\alpha \to n^2\alpha \iff u \to u + 2\ln n,\qquad n=2,4,6,\ldots$$
 
 $$\boxed{\Delta\delta_0 \ge \frac{C\sqrt{1 - \beta\delta_v}}{2\beta\ln n}}$$
 
-满足资格条件的跃迁 $n$ 构成候选群族 $\mathcal{G} = \{U(1)/\mathbb{Z}_n \mid n\text{ 偶},\;\Delta\delta_0 \ge C\sqrt{1-\beta\delta_v}/(2\beta\ln n)\}$。**角亏涨落不直接决定跃迁——它只决定哪些跃迁有资格进入候选集。** 最终跃迁由路径积分在候选群族上选出自由能最小的主导群（见步骤 5 与 §11.4）。
+满足资格条件的跃迁 $n$ 构成候选群族 $\mathcal{G} = \{U(1)//\mathbb{Z}_n \mid n\text{ 偶},\;\Delta\delta_0 \ge C\sqrt{1-\beta\delta_v}/(2\beta\ln n)\}$。**角亏涨落不直接决定跃迁——它只决定哪些跃迁有资格进入候选集。** 最终跃迁由路径积分在候选群族上选出自由能最小的主导群（见步骤 5 与 §11.4）。
 
 **步骤 5：电子的本体论定位与配对**
 
@@ -869,7 +869,7 @@ $$\Delta\delta_v(T) = \Delta\delta_0\sqrt{\tanh\frac{\hbar\Omega_0}{2k_BT}}$$
 
 零温 $T \to 0$：$\Delta\delta_v \to \Delta\delta_0$；高温 $T \to \infty$：$\Delta\delta_v \to 0$（涨落被声子热噪声完全抑制）。
 
-**第二步：候选群族与自由能竞争。** 资格条件筛选出候选群族 $\mathcal{G} = \{U(1)/\mathbb{Z}_n \mid n\text{ 偶},\;\Delta\delta_0 \ge C\sqrt{1-\beta\delta_v}/(2\beta\ln n)\}$。路径积分 $Z = \sum_{U(1)/\mathbb{Z}_n \in \mathcal{G}} \int D[A,\psi]\,e^{-S}$ 在候选群族上选出自由能最小的主导群。
+**第二步：候选群族与自由能竞争。** 资格条件筛选出候选群族 $\mathcal{G} = \{U(1)//\mathbb{Z}_n \mid n\text{ 偶},\;\Delta\delta_0 \ge C\sqrt{1-\beta\delta_v}/(2\beta\ln n)\}$。路径积分 $Z = \sum_{U(1)//\mathbb{Z}_n \in \mathcal{G}} \int D[A,\psi]\,e^{-S}$ 在候选群族上选出自由能最小的主导群。
 
 **第三步：临界温度 = 自由能交叉。**
 
@@ -977,7 +977,7 @@ CQM 的耦合常数涨落需明确指定所属主丛与结构群：
 
 $$u_G = \ln g_G,\quad [u_G, p_{u_G}] = i$$
 
-其中 $G$ 明确指定结构群。**海森堡代数一维性限定定义域**：$u_G=\ln g_G$ 作为全局单坐标定义，当且仅当 $G$ 是一维阿贝尔群（$S^1$ 及其商 $U(1)/\mathbb{Z}_n$）；非阿贝尔群的对数是局部且多值的（Baker–Campbell–Hausdorff 级数），无法定义单一海森堡对（见 `09 精细引力（FG）/FG_核心理论.md` §4.1 定位注）。因此耦合常数的海森堡量子化只在电磁扇区直接可行：
+其中 $G$ 明确指定结构群。**海森堡代数一维性限定定义域**：$u_G=\ln g_G$ 作为全局单坐标定义，当且仅当 $G$ 是一维阿贝尔群（$S^1$ 及其商 $U(1)//\mathbb{Z}_n$）；非阿贝尔群的对数是局部且多值的（Baker–Campbell–Hausdorff 级数），无法定义单一海森堡对（见 `09 精细引力（FG）/FG_核心理论.md` §4.1 定位注）。因此耦合常数的海森堡量子化只在电磁扇区直接可行：
 
 - 超导：$U(1)_{\text{em}}$，涨落 $u_{U(1)}$，跃迁耦级 $2\ln n$（$n=2,4,6,\ldots$），资格条件 $\Delta\delta_0 \ge C\sqrt{1-\beta\delta_v}/(2\beta\ln n)$
 - 核子同位旋 $SU(2)_{\text{isospin}}$ 与色动力学 $SU(3)_{\text{color}}$：耦合常数不经海森堡代数直接量子化，而是经 Casimir 阶梯 $g_k=\alpha\exp(-(n_k-n_1)/n_1)$ 从 $U(1)$ 锚导出（重整化群跑动形式，见 `09 精细引力（FG）/FG_核心理论.md` §5.4 定位注）
@@ -994,17 +994,17 @@ $$D_\mu = \partial_\mu - i g_G A_\mu^a T^a$$
 
 耦合常数涨落不能唯一确定伴丛/约束伴丛的结构群，只能约束它。约束是分层的：
 
-$$\underbrace{[\hat{u},\hat{p}_u]=i}_{\substack{\text{约束}_1\\\text{海森堡一维性}}}\;\Rightarrow\;\underbrace{U(1)}_{\substack{\text{约束}_1\text{产物}\\\text{=约束}_2\text{对象}}}\;\xrightarrow{\;\mathbb{Z}_n\text{ 商}\;}\;\underbrace{U(1)/\mathbb{Z}_n}_{\substack{\text{约束}_2\text{产物}\\\text{=丛构造输入}}}\;\Rightarrow\;\underbrace{E_n}_{\text{产物}}$$
+$$\underbrace{[\hat{u},\hat{p}_u]=i}_{\substack{\text{约束}_1\\\text{海森堡一维性}}}\;\Rightarrow\;\underbrace{U(1)}_{\substack{\text{约束}_1\text{产物}\\\text{=约束}_2\text{对象}}}\;\xRightarrow{\;\mathbb{Z}_n\text{ 商}\;}\;\underbrace{U(1)//\mathbb{Z}_n}_{\substack{\text{约束}_2\text{产物}\\\text{=丛构造输入}}}\;\Rightarrow\;\underbrace{E_n}_{\text{产物}}$$
 
 - **约束$_1$**：海森堡代数一维性 → 结构群必须一维阿贝尔 → 产物 $U(1)$
-- **约束$_2$**：$\mathbb{Z}_n$（电荷量子化：权 $q$ 表示当且仅当 $n\mid q$ 时下降）商约束 $U(1)$ → 产物 $U(1)/\mathbb{Z}_n$
-- **丛构造**：每个 $U(1)/\mathbb{Z}_n$ 给出伴丛 $E_n = P\times_{G_n}\mathbb{C}$
+- **约束$_2$**：$\mathbb{Z}_n$（电荷量子化：权 $q$ 表示当且仅当 $n\mid q$ 时下降）商约束 $U(1)$ → 产物 $U(1)//\mathbb{Z}_n$
+- **丛构造**：每个 $U(1)//\mathbb{Z}_n$ 给出伴丛 $E_n = P\times_{G_n}\mathbb{C}$
 
 ### 13.4 涨落伴丛
 
 涨落伴丛是**伴丛族**（不是群族——承载序参量的是伴丛，不是群集合）：
 
-$$\mathcal{E}_{\text{涨落}} = \{E_n = P\times_{G_n}\mathbb{C} \mid G_n \in \mathcal{G}\}, \quad \mathcal{G} = \{U(1)/\mathbb{Z}_n \mid n\text{ 偶}\}$$
+$$\mathcal{E}_{\text{涨落}} = \{E_n = P\times_{G_n}\mathbb{C} \mid G_n \in \mathcal{G}\}, \quad \mathcal{G} = \{U(1)//\mathbb{Z}_n \mid n\text{ 偶}\}$$
 
 三重约束：
 
@@ -1039,7 +1039,7 @@ $$\begin{aligned}
 
 | 扇区 | 底空间角亏 | 耦合常数 | 跃迁耦级/资格条件 | 约束出的结构群族 |
 |:------|:-----------|:---------|:------|:----------------|
-| $U(1)_{\text{em}}$ | $\delta_v^{\text{cell}}$ | $\alpha$ | $2\ln n$（$n=2,4,6,\ldots$） | $\{e\}, \mathbb{Z}_2, U(1)/\mathbb{Z}_2, \ldots$ |
+| $U(1)_{\text{em}}$ | $\delta_v^{\text{cell}}$ | $\alpha$ | $2\ln n$（$n=2,4,6,\ldots$） | $\{e\}, \mathbb{Z}_2, U(1)//\mathbb{Z}_2, \ldots$ |
 | $SU(2)_{\text{isospin}}$ | $\delta_v^{\text{nuc}}$ | $g_2$ | 待定 | $SU(2) \to H_{\text{核}}$ |
 | $SU(3)_{\text{color}}$ | $\delta_v^{\text{nuc}}$ | $\alpha_s$ | 禁闭阈值 | 禁闭态结构 |
 
@@ -1071,7 +1071,7 @@ $$Z = \sum_{E_n \in \mathcal{E}_{\text{涨落}}} \int D[A,\psi]\, e^{-S_{E_n}[A,
 
 - **主导伴丛**：宏观上自由能最小的伴丛胜出
 - **跃迁条件**：两个伴丛自由能相等处给出 $T_c$
-- **离散子群保留**：如 $U(1)/\mathbb{Z}_2$，决定磁通量子化
+- **离散子群保留**：如 $U(1)//\mathbb{Z}_2$，决定磁通量子化
 - **拓扑扇区**：涡旋类型、马约拉纳零模
 - **事后大群**：超导态剩余对称性直积
 
@@ -1118,7 +1118,7 @@ $$\text{先在规范群} \to \text{角亏涨落} \to \text{扇区耦合涨落} \
 
 | 条件 | 主导超导群 |
 |:------|:-----------|
-| 角亏低，序参量标量 $q=2$ | $U(1)\to\{e\}$ 或 $U(1)/\mathbb{Z}_2$（s 波） |
+| 角亏低，序参量标量 $q=2$ | $U(1)\to\{e\}$ 或 $U(1)//\mathbb{Z}_2$（s 波） |
 | 角亏各向异性，序参量在 $SO(2)$ 下变号 | $U(1)\times SO(2)\to\mathbb{Z}_2$（d 波） |
 | 角亏含自旋扇区，5，序参量为三重态 | $U(1)\times SU(2)\to H_{\text{spin}}$（p 波） |
 | 角亏强且和乐非平庸 | 拓扑超导群，马约拉纳零模 |
@@ -1127,7 +1127,7 @@ $$\text{先在规范群} \to \text{角亏涨落} \to \text{扇区耦合涨落} \
 
 ### 13.15 质数—群—黎曼猜想的统一链条
 
-$$\text{物质（质数前网络描述）} \xrightarrow{\text{基态伽罗瓦表示}} GL(5)\text{ 自守谱} \xrightarrow{\text{紧化（GRH）}} SU(5)\text{ 基态同步} \xleftrightarrow{\text{重组实现}} U(1)\times SU(2)\times SU(3)\text{ 规范群} \xrightarrow{\text{有限化}} \text{质子/中子 } A_4 \xrightarrow{\text{表示论}} \text{先在规范群 } U(1)\times SU(2)\times SU(3) \xrightarrow{\text{角亏涨落}} \text{结构群叠加态} \xrightarrow{\text{路径积分}} \text{主导超导群}$$
+$$\text{物质（质数前网络描述）} \xrightarrow{\text{基态伽罗瓦表示}} GL(5)\text{ 自守谱} \xrightarrow{\text{紧化（GRH）}} SU(5)\text{ 基态同步} \xRightarrow{\text{重组实现}} U(1)\times SU(2)\times SU(3)\text{ 规范群} \xrightarrow{\text{有限化}} \text{质子/中子 } A_4 \xrightarrow{\text{表示论}} \text{先在规范群 } U(1)\times SU(2)\times SU(3) \xrightarrow{\text{角亏涨落}} \text{结构群叠加态} \xrightarrow{\text{路径积分}} \text{主导超导群}$$
 
 **分层要点**：基态同步是 SU(5)（GL(5) 自守形式经紧化算符投影）；黎曼猜想是 GL(5) 固定层级的实谱条件；**物质自组织选中 GL(5)（SU(5) 是含标准模型的最小单群，rank 4）正是物质自组织的体现**；$n > 5$ 层级不排除，但 GL(5) 主导物理谱。
 
@@ -1190,7 +1190,7 @@ CQM 的核心创新始终只有一点：**把量子力学的共轭对从 $(\hat{
 | D | 从 Lindblad 稳态严格推导边-面关联矩阵 $E$ |
 | E | $\lambda_c$ 方程是退相干的必然结果 |
 | N1/N2 | 中子质量-谱映射 $m \propto \lambda_{\min}$；角亏 $\epsilon(\delta)$ 显式公式 |
-| G18/G19/G21 | $\beta$、$K_{\text{eff}}$ 微观来源；自由能 $F_n$ 的可计算作用量 $S_{U(1)/\mathbb{Z}_n}$ 构造；和乐容差标定；赝能隙谱函数映射 |
+| G18/G19/G21 | $\beta$、$K_{\text{eff}}$ 微观来源；自由能 $F_n$ 的可计算作用量 $S_{U(1)//\mathbb{Z}_n}$ 构造；和乐容差标定；赝能隙谱函数映射 |
 
 （缺口编号体系：N1–N4 见三种引力文档，G 类见超导文档。）
 

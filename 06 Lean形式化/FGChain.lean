@@ -25,7 +25,7 @@ FG 纤维丛理论链路的完整 Lean 4 形式化：从嘉当矩阵与晶胞分
 | 3–5 | `FGChain.QuantumOscillation` | 晶胞量子振荡、晶胞波函数（声子占据态）、谐振子谱 E_n = ħω(n+1/2) |
 | 6–8 | `FGChain.CurvatureOperator` | 曲率算符 δ̂_v、CQM 海森堡对 [û,p̂_u]=iC、不确定性通道 |
 | 9（前置） | `FGChain.ReggeBase` | 晶胞分布 → Regge 底空间，两链交汇定理 |
-| 10–14 | `FGChain.FiberBundle` | 离散主丛、和乐平庸化、结构群涨落、重组实现 F=G↔R=G↔Ĥ（子群重组）、表示、物质场 |
+| 10–14 | `FGChain.FiberBundle` | 离散主丛、和乐平庸化、结构群涨落、重组实现 F=G⇒R=G⇒Ĥ（子群重组）、表示、物质场 |
 | 15–19 | `FGChain.Synchronization` | 同步算符（零点谱经紧化约束进入 𝔠_n=1/4+γ_n²）、本征值交叉（IVT）、CFT 幂律、全局同步=和乐平庸化 |
 | 验收 | `FGChain.Observable` | 氢原子能级/巴尔末系、壳层容量/周期长度、跃迁耦级谱、BCS T_c 正性 |
 

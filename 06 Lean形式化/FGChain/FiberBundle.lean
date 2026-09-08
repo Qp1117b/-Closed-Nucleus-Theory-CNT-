@@ -15,14 +15,14 @@ import FGChain.ReggeBase
    ↓
 [环节10] 纤维丛：底空间 + 结构群（U(1) 扇区，海森堡一维性限定）+ 联络
 [环节11] 主丛结构群耦合常数涨落：u_G = ln g_G，涨落由曲率通道驱动
-[环节12] 重组实现 F = G ↔ R = G ↔ Ĥ（四层结构，子群重组：Spec(R) ⊆ Spec(G)）
+[环节12] 重组实现 F = G ⇒ R = G ⇒ Ĥ（四层结构，子群重组：Spec(R) ⊆ Spec(G)）
 [环节13] 实现群 R（重组产物，充当相变后有序态空间——发生学修正③的落实）
 [环节14] 表示 ρ: R → GL(V) 与物质场（伴丛截面，相位由和乐决定）
 ```
 
 ## 发生学修正③的落实
 
-按《FG_纤维丛理论》§2.0：F = G ↔ R = G ↔ Ĥ 是**主丛本身**（四层结构），
+按《FG_纤维丛理论》§2.0：F = G ⇒ R = G ⇒ Ĥ 是**主丛本身**（四层结构），
 不是"F 充当后主丛结构群"。相变后的有序态由**实现群 R**（重组产物）充当；
 群算符 Ĥ 是 R 在表示空间上的算符表示，与 R 谱等价；**母群 G 本身不变**，
 内部以子群重组（本模块 `RecombinationRecord` + `subgroupRecombination`
@@ -111,7 +111,7 @@ theorem fluctuation_driven_by_curvature (β δv C Δu : ℝ)
     0 < C * Superconductivity.CQM.properTimeFlow β δv / (β * Δu) :=
   curvature_coupling_threshold_pos β δv C Δu hβ hδ hbound hC hΔu
 
-/-! ## 3. 重组实现 F = G ↔ R = G ↔ Ĥ（环节12–13，发生学修正③落实） -/
+/-! ## 3. 重组实现 F = G ⇒ R = G ⇒ Ĥ（环节12–13，发生学修正③落实） -/
 
 /-- **重组实现记录（四层结构的谱数据）**：
     母群 G（主丛结构群，高对称相/自由相）经重组实现为**实现群 R**

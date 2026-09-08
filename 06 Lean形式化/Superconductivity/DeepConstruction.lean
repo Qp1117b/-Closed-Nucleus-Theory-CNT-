@@ -14,9 +14,9 @@ import Superconductivity.FormalizationRigor
   K_eff = ∂²E_regge/∂δ_v² = θ_D·λ·n²/(2π²)
 闭合 G18 子项"K_eff 的微观推导"。
 
-## 2. S_{U(1)/Z_n} 完整作用量泛函
+## 2. S_{U(1)//Z_n} 完整作用量泛函
 构造四项完整作用量：
-  S_{U(1)/Z_n} = S_Regge + S_YM + S_GL - S_entropy
+  S_{U(1)//Z_n} = S_Regge + S_YM + S_GL - S_entropy
   - S_Regge = (1/8π)·Σ_v δ_v²·A_v  (底空间Regge作用量)
   - S_YM = (1/4g²)·∫Tr(F∧*F)      (Yang-Mills规范场作用量)
   - S_GL = ∫d³x [½|∇Δ|² + V(Δ)]   (Ginzburg-Landau序参量作用量)
@@ -93,7 +93,7 @@ theorem curvatureStiffness_monotone_in_thetaD
   have h_denom : 0 < 2 * Real.pi^2 := by positivity
   exact div_pos (mul_pos (mul_pos htheta (mul_pos hlam (sq_pos_of_ne_zero hn.ne')))) h_denom
 
-/-! ## 2. S_{U(1)/Z_n} 完整作用量泛函 -/
+/-! ## 2. S_{U(1)//Z_n} 完整作用量泛函 -/
 
 /-- **Regge作用量**（底空间几何）: S_Regge = (1/8π)·Σ_v δ_v²·A_v。
     离散化给出 E_regge = θ_D·λ·δ_v²·n²/(2π)²。 -/
@@ -101,7 +101,7 @@ noncomputable def reggeAction (deltaV areaV : ℝ) : ℝ :=
   (1 / (8 * Real.pi)) * deltaV^2 * areaV
 
 /-- **Yang-Mills作用量**（规范场）: S_YM = (1/4g²)·∫Tr(F∧*F)。
-    对 U(1)/Z_n，F = dA，和乐 W = exp(i·δ_v·T)。
+    对 U(1)//Z_n，F = dA，和乐 W = exp(i·δ_v·T)。
     离散化给出 E_gauge = θ_D·[2ln(n)]²/(4π²)。 -/
 noncomputable def yangMillsAction (g coupling : ℝ) : ℝ :=
   (1 / (4 * g^2)) * coupling^2
@@ -139,8 +139,8 @@ theorem glPotential_derivative_zero_at_critical
     即 entropyModel（来自 FormalizationRigor）。 -/
 -- 已在 FormalizationRigor 中定义
 
-/-- **完整作用量**: S_{U(1)/Z_n} = S_Regge + S_YM + S_GL - S_entropy。
-    自由能 F_n = -k_B·T·ln(Z), Z = ∫D[A,ψ]·exp(-S_{U(1)/Z_n})。
+/-- **完整作用量**: S_{U(1)//Z_n} = S_Regge + S_YM + S_GL - S_entropy。
+    自由能 F_n = -k_B·T·ln(Z), Z = ∫D[A,ψ]·exp(-S_{U(1)//Z_n})。
     离散化给出 F_n = E_regge + E_gauge + E_cond - T·S_n。 -/
 noncomputable def fullAction (deltaV areaV g coupling Delta lambda Vn n T thetaD : ℝ) : ℝ :=
   reggeAction deltaV areaV +
@@ -149,7 +149,7 @@ noncomputable def fullAction (deltaV areaV g coupling Delta lambda Vn n T thetaD
   Real.log n * (1 + 1 / (2 * n^2)) * Real.tanh (T / thetaD)
 
 /-- **定理**：完整作用量分解为四项。
-    S_{U(1)/Z_n} = S_Regge + S_YM + S_GL - S_entropy。 -/
+    S_{U(1)//Z_n} = S_Regge + S_YM + S_GL - S_entropy。 -/
 theorem fullAction_decomposition
     (deltaV areaV g coupling Delta lambda Vn n T thetaD : ℝ) :
     fullAction deltaV areaV g coupling Delta lambda Vn n T thetaD =
@@ -279,7 +279,7 @@ theorem a5toA4_ratio_gt_one : a5toA4_ratio > 1 := by
     | S_n 可计算形式              | 闭合      | 闭合       | 定理4: entropyModel   |
     | T_c 自由能交叉              | 闭合      | 闭合       | 定理6推论             |
     | **K_eff 微观推导**          | **开放**  | **闭合**   | **本模块: 二阶导数**   |
-    | **S_{U(1)/Z_n} 完整作用量** | **部分闭合** | **闭合** | **本模块: 四项构造**   |
+    | **S_{U(1)//Z_n} 完整作用量** | **部分闭合** | **闭合** | **本模块: 四项构造**   |
 
     G18缺口现已**完全闭合**（所有子项均已闭合）。          -/
 

@@ -270,7 +270,7 @@ theorem entropyOriginal_nonzero_at_zero (lambda n : ℝ)
 
 CQM §9.1: 跃迁耦级谱 Δu_n = 2·ln(n), n=2,4,6,...
 CQM §11.2: E_规范场 ~ ∫Tr(F∧*F) (Yang-Mills)
-U(1)/Z_n: F = dA, 和乐 W = exp(i·δ_v·T), 动量 k ∝ Δu_n = 2·ln(n)
+U(1)//Z_n: F = dA, 和乐 W = exp(i·δ_v·T), 动量 k ∝ Δu_n = 2·ln(n)
 ⟹ E_gauge = θ_D·[2·ln(n)]²/(4π²)                                                   -/
 
 /-- 跃迁耦级谱：Δu_n = 2·ln(n)（CQM §9.1）。 -/
@@ -523,7 +523,7 @@ theorem tc_geometric_upperBound :
 
 /-! ## G18缺口闭合状态
 
-CQM §11.2 G18缺口："CQM尚未给出可计算的作用量 S_{U(1)/Z_n}"
+CQM §11.2 G18缺口："CQM尚未给出可计算的作用量 S_{U(1)//Z_n}"
 
 本模型闭合的G18子项：
   - β 微观来源          → 定理3: β=8π+1=(1/4π)ln(L/a)
@@ -534,7 +534,7 @@ CQM §11.2 G18缺口："CQM尚未给出可计算的作用量 S_{U(1)/Z_n}"
   - S_n 可计算形式       → 定理4: S_n = ln(n)·(1+1/(2n²))·tanh(T/θ_D), S(0)=0
   - T_c 自由能交叉       → 定理6推论: F_1(Tc)=F_2(Tc)
   - K_eff 微观推导       → DeepConstruction: K_eff = θ_D·λ·n²/(2π²)
-  - S_{U(1)/Z_n} 作用量  → DeepConstruction: 四项完整构造
+  - S_{U(1)//Z_n} 作用量  → DeepConstruction: 四项完整构造
   - 拓扑Tc解析解         → 定理7: Tc_topo = 0.249·θ_D
   - 配对Tc从CQM推导      → 定理8: McMillan是CQM鞍点方程解
   - Tc几何上限           → 定理9: Tc ≤ θ_D/4
