@@ -422,9 +422,9 @@ $$\left(I + \frac{i c A_4}{2a}\right)\psi^{n+1} = \left(I - \frac{i c A_4}{2a}\r
 
 ### 7.4 精细结构常数
 
-**来源**：SU(5)重组实现→$U(1)$电磁群→$\alpha$。具体地，$M$ 本征值 $\{9,4,1\}$ 通过 $S_5$ 表示论与 SU(5) 规范群结构锁定组合不变量：
+**来源**：SU(5)重组实现↔$U(1)$电磁群→$\alpha$。具体地，$M$ 本征值 $\{9,4,1\}$ 通过 $S_5$ 表示论与 SU(5) 规范群结构锁定组合不变量：
 
-$$\text{SU}(5) \;\xrightarrow{\text{重组实现}}\; U(1)\text{电磁群} \;\xrightarrow{\text{耦合常数}}\; \alpha$$
+$$\text{SU}(5) \;\xleftrightarrow{\text{重组实现}}\; U(1)\text{电磁群} \;\xrightarrow{\text{耦合常数}}\; \alpha$$
 
 $$\alpha^{-1} = \frac{16384\pi}{375} \approx 137.2583$$
 
@@ -432,7 +432,7 @@ $$\alpha^{-1} = \frac{16384\pi}{375} \approx 137.2583$$
 
 与实验值 $137.035999$（CODATA 2022）偏差约 $0.162\%$（≈1620 ppm），为一阶近似、待高阶修正。定位：这不是到 ppm 的精确符合，故**不能称"严格/精确"**；且 CQM 内部存在经弱混合角修正的不同结果（如 α⁻¹≈137.018、偏差 −131 ppm，见 `07 推导与数学/CQM_数学_SU5群论.md`），数值尚未收敛为唯一精确值；标准模型中 $\alpha$ 是需精密测量的输入参数，并无被主流接受的纯数论推导（[Trautman, arXiv:1411.4673](https://arxiv.org/abs/1411.4673)）；此处为 CQM 框架内的启发式构造匹配。
 
-**双路径交叉验证**：4-单纯形路径（$M = E^T E \to \{9,4,1\} \to P = 16384\pi/375 \to \alpha^{-1}$）给出 $\alpha^{-1} = 16384\pi/375$（启发式参考）。$\alpha$ 的严格来源是 SU(5)重组实现→$U(1)$电磁群耦合常数，是GL(5)固定层级整体的反映（见 `07 推导与数学/CQM_数学_Adele纲领.md`）。
+**双路径交叉验证**：4-单纯形路径（$M = E^T E \to \{9,4,1\} \to P = 16384\pi/375 \to \alpha^{-1}$）给出 $\alpha^{-1} = 16384\pi/375$（启发式参考）。$\alpha$ 的严格来源是 SU(5)重组实现↔$U(1)$电磁群耦合常数，是GL(5)固定层级整体的反映（见 `07 推导与数学/CQM_数学_Adele纲领.md`）。
 
 ### 7.5 牛顿引力常数
 
@@ -1127,7 +1127,7 @@ $$\text{先在规范群} \to \text{角亏涨落} \to \text{扇区耦合涨落} \
 
 ### 13.15 质数—群—黎曼猜想的统一链条
 
-$$\text{物质（质数前网络描述）} \xrightarrow{\text{基态伽罗瓦表示}} GL(5)\text{ 自守谱} \xrightarrow{\text{紧化（GRH）}} SU(5)\text{ 基态同步} \xrightarrow{\text{重组实现}} U(1)\times SU(2)\times SU(3)\text{ 规范群} \xrightarrow{\text{有限化}} \text{质子/中子 } A_4 \xrightarrow{\text{表示论}} \text{先在规范群 } U(1)\times SU(2)\times SU(3) \xrightarrow{\text{角亏涨落}} \text{结构群叠加态} \xrightarrow{\text{路径积分}} \text{主导超导群}$$
+$$\text{物质（质数前网络描述）} \xrightarrow{\text{基态伽罗瓦表示}} GL(5)\text{ 自守谱} \xrightarrow{\text{紧化（GRH）}} SU(5)\text{ 基态同步} \xleftrightarrow{\text{重组实现}} U(1)\times SU(2)\times SU(3)\text{ 规范群} \xrightarrow{\text{有限化}} \text{质子/中子 } A_4 \xrightarrow{\text{表示论}} \text{先在规范群 } U(1)\times SU(2)\times SU(3) \xrightarrow{\text{角亏涨落}} \text{结构群叠加态} \xrightarrow{\text{路径积分}} \text{主导超导群}$$
 
 **分层要点**：基态同步是 SU(5)（GL(5) 自守形式经紧化算符投影）；黎曼猜想是 GL(5) 固定层级的实谱条件；**物质自组织选中 GL(5)（SU(5) 是含标准模型的最小单群，rank 4）正是物质自组织的体现**；$n > 5$ 层级不排除，但 GL(5) 主导物理谱。
 

@@ -265,7 +265,7 @@ $$c = \frac{k\,\dim\mathfrak{g}}{k + h^\vee}$$
 
 二者同处 GL(5) 固定层级：
 
-$$\text{GL}(5) \;\xrightarrow{\text{紧化}}\; \text{SU}(5) \;\xrightarrow{\text{重组实现}}\; U(1)\times SU(2)\times SU(3)$$
+$$\text{GL}(5) \;\xrightarrow{\text{紧化}}\; \text{SU}(5) \;\xleftrightarrow{\text{重组实现}}\; U(1)\times SU(2)\times SU(3)$$
 
 #### 5.4.2 SU(5)重组实现时中央荷的分解
 
@@ -322,7 +322,7 @@ $$c_{\text{GL}(5)}^{\text{eff}} = \frac{24k^{\text{eff}}}{k^{\text{eff}}+5}$$
 | **同步成本** | $C$ 控制耦合动量约束 $p_u = 2\pi n/L_u$ 的谱 | CNST §4 |
 | **OPE系数** | $C$ 通过Kac-Moody水平 $k = 1/\alpha - 5$ 影响OPE系数大 $k$ 展开 | FG §17.7 |
 | **关联能** | $C$ 通过OPE系数进入关联能 $E_c = \sum |C_{ij}^p|^2/B_{pp} \cdot \Delta h_p \cdot \langle\mathcal{F}_p\rangle$ | FG §17.4 |
-| **耦合常数** | $g = \sqrt{4\pi\alpha}$，$\alpha$ 来自 SU(5)重组实现→$U(1)$电磁群耦合常数，$C$ 通过 $k$ 约束 $\alpha$ | FG §17.5 |
+| **耦合常数** | $g = \sqrt{4\pi\alpha}$，$\alpha$ 来自 SU(5)重组实现↔$U(1)$电磁群耦合常数，$C$ 通过 $k$ 约束 $\alpha$ | FG §17.5 |
 
 **物理意义**：
 
@@ -550,7 +550,7 @@ CFT视角：紧化算符是**共形映射**，同步本征态是**初级算子**
 
 `CQM_核心_朗兰兹分层共振与谱量子.md`中的GL(n)分层：
 
-$$GL(5) \xrightarrow{\text{紧化}} SU(5) \xrightarrow{\text{重组实现}} \text{规范群}$$
+$$GL(5) \xrightarrow{\text{紧化}} SU(5) \xleftrightarrow{\text{重组实现}} \text{规范群}$$
 
 CFT视角：GL(n)分层是**Kac-Moody代数的水平分层**，每个本征群对应一个Kac-Moody水平 $k$，中央荷 $c$ 由Sugawara构造确定。
 

@@ -12,7 +12,7 @@
 
 CQM 的精细结构常数来源框架：
 
-$$\text{SU}(5) \;\xrightarrow{\text{重组实现}}\; A_4\text{嘉当矩阵} \;\xrightarrow{\text{4本征群}}\; \{SU(2)_k\}_{k=1}^{4}\text{（全紧致壳层群）} \;\xrightarrow{\text{U(1)耦合常数}}\; \alpha$$
+$$\text{SU}(5) \;\xleftrightarrow{\text{重组实现}}\; A_4\text{嘉当矩阵} \;\xrightarrow{\text{4本征群}}\; \{SU(2)_k\}_{k=1}^{4}\text{（全紧致壳层群）} \;\xrightarrow{\text{U(1)耦合常数}}\; \alpha$$
 
 核心逻辑：
 1. **SU(5) 重组实现**：物质自组织（=自发组织）基态群 SU(5) 重组实现
@@ -37,7 +37,7 @@ $$\alpha_{\text{CQM}}^{-1} = \frac{16384\pi}{375} = \frac{2^{14}\pi}{3 \cdot 5^3
 
 Wyler 常数完全由 $A_4$ 的群论不变量决定，因此自然嵌入 CQM 的 SU(5) 重组实现链条：
 
-$$\text{SU}(5) \;\xrightarrow{\text{重组实现}}\; A_4 \;\xrightarrow{\text{群论不变量}}\; \alpha_W$$
+$$\text{SU}(5) \;\xleftrightarrow{\text{重组实现}}\; A_4 \;\xrightarrow{\text{群论不变量}}\; \alpha_W$$
 
 具体地，Wyler 常数使用了 $A_4$ 的**四个基本群论不变量**：
 
@@ -122,12 +122,12 @@ CQM 框架现在有 $\alpha$ 的两种候选表达式：
 
 **如果 Wyler 常数是正确的**，则 $\alpha$ 的来源框架变为：
 
-$$\text{SU}(5) \;\xrightarrow{\text{重组实现}}\; A_4 \;\xrightarrow{\text{全部群论不变量}}\; \alpha_W = \frac{2h-1}{\text{tr}(A_4)} \pi^{-r} \left(\frac{\pi^h}{2^r |W|}\right)^{1/r}$$
+$$\text{SU}(5) \;\xleftrightarrow{\text{重组实现}}\; A_4 \;\xrightarrow{\text{全部群论不变量}}\; \alpha_W = \frac{2h-1}{\text{tr}(A_4)} \pi^{-r} \left(\frac{\pi^h}{2^r |W|}\right)^{1/r}$$
 
 这个框架的优美之处：
 1. **无任意参数**：全部由 $A_4$ 的群论结构决定
 2. **精度极高**：0.61 ppm，接近实验测量精度
-3. **与 CQM 完全一致**：SU(5) 重组实现 → $A_4$ → $\alpha$
+3. **与 CQM 完全一致**：SU(5) 重组实现 ↔ $A_4$ → $\alpha$
 4. **Weyl 群自然出现**：$5! = |S_5|$ 是 SU(5) 的 Weyl 群阶
 
 ### 4.3 对"GL(5) 整体反映"的强化

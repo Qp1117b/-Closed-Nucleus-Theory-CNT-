@@ -111,11 +111,11 @@ $$2h - 1 = 2 \times 5 - 1 = 9$$
 
 CQM 的核心框架是：
 
-$$\text{SU}(5) \;\xrightarrow{\text{重组实现}}\; A_4 \;\xrightarrow{\text{4本征群}}\; \{SU(2)_k\}_{k=1}^{4}\text{（全紧致壳层群）} \;\xrightarrow{\text{U(1)耦合常数}}\; \alpha$$
+$$\text{SU}(5) \;\xleftrightarrow{\text{重组实现}}\; A_4 \;\xrightarrow{\text{4本征群}}\; \{SU(2)_k\}_{k=1}^{4}\text{（全紧致壳层群）} \;\xrightarrow{\text{U(1)耦合常数}}\; \alpha$$
 
 Wyler 常数完全由 $A_4$ 的群论不变量决定，因此自然嵌入这个链条：
 
-$$\text{SU}(5) \;\xrightarrow{\text{重组实现}}\; A_4 \;\xrightarrow{\text{群论不变量 } h, r, |W|, \text{tr}}\; \alpha_W$$
+$$\text{SU}(5) \;\xleftrightarrow{\text{重组实现}}\; A_4 \;\xrightarrow{\text{群论不变量 } h, r, |W|, \text{tr}}\; \alpha_W$$
 
 ### 4.2 与粗略表达式 $16384\pi/375$ 的对比
 
