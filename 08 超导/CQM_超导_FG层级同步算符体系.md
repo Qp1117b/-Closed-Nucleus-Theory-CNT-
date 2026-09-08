@@ -42,15 +42,15 @@ $$\mathcal{C}_{\text{proton}} = A_4 \xrightarrow{\text{链B}} \mathcal{C}_{\text
 
 **（三）两端层级的同步算符构造**：
 
-- **元素 FG**（§11.7）：$\hat{\mathcal{S}}_{\text{el}} = V_0 + L_{\text{orbital}}$，本征值 $N(\gamma_n) + l = n + l$（Madelung 规则），周期表推导（填充顺序、壳层饱和数 $2,6,10,14$、洪特规则三条全部一致）。
+- **元素 FG**（`CQM_超导_专题与扩展.md` §11.7）：$\hat{\mathcal{S}}_{\text{el}} = V_0 + L_{\text{orbital}}$，本征值 $N(\gamma_n) + l = n + l$（Madelung 规则），周期表推导（填充顺序、壳层饱和数 $2,6,10,14$、洪特规则三条全部一致）。
 - **晶胞 FG**（§11.6、§11.10）：$\hat{\mathcal{S}}_{\text{super}} = V_0 + V_{\text{角亏激活}}(T)$，本征值 $\lambda_n(T) = \gamma_n - V_{\text{角亏激活}}(n,T)$，本征值交叉 $\lambda_1(T_c) = \lambda_2(T_c)$ 给出 $T_c$ 闭式 $T_c = \theta_D/(2\,\mathrm{arccoth}\,x)$。
 - **电子 FG**（氢原子语境，§11.6）：同步算符谱 $\{\gamma_n\}$ 经谱序号 $n = N(\gamma_n)$ 给出 $E_n = -R/N(\gamma_n)^2$（精度 $10^{-12}$）。
 
 ### 1.2 结构性诊断：断链的位置
 
-第一性 $T_c$ 计算链的审计结论（§11.10、§13 缺口表）：**公式推导完整，前向预言未闭合**。具体断点：
+第一性 $T_c$ 计算链的审计结论（`CQM_超导核心理论.md` §11.10、`CQM_超导_专题与扩展.md` §13 缺口表）：**公式推导完整，前向预言未闭合**。具体断点：
 
-$$\text{材料结构} \xrightarrow{\text{Regge几何}} \delta_v \xrightarrow{\text{?}} \Delta\delta_0^{\text{eff}} \xrightarrow{\theta_D} T_c$$
+$$\text{材料结构} \xrightarrow{\text{Regge几何}} \delta_v \xrightarrow{\text{待建立}} \Delta\delta_0^{\text{eff}} \xrightarrow{\theta_D} T_c$$
 
 从结构几何可计算**缺陷涨落**部分（位错、空位、压力），但**内禀角亏** $\delta_{\text{intrinsic}}$ 无内部来源——当前只能引入外部 DFT Berry 曲率。前向计算（$\delta_{\text{intrinsic}} = 0$）给出 $T_c = 0$ 对大部分常压超导体，暴露该环节是缺失的关键。
 
@@ -340,7 +340,7 @@ $$\boxed{
 
 ## 9. δ_intrinsic 缺口的闭合方案
 
-### 9.1 原缺口陈述（§11.10、§13）
+### 9.1 原缺口陈述（超导核心理论 §11.10、专题与扩展 §13）
 
 > $\delta_{\text{intrinsic}}$ 的第一性来源是分子 FG 同步算符谱的几何显现（§9.2）。本征值交叉路径 $T_c=\frac{\theta_D}{2\,\text{arccoth}(x)}$ 已建立纯第一性前向预测框架，从Regge剖分→角亏→声子→涨落→Tc闭式，不依赖$\delta_v$反推。
 

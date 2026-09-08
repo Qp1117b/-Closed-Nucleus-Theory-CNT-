@@ -283,7 +283,7 @@ $$\delta(Z,N) = 1 - \varepsilon_0 \cdot \frac{N}{Z+N}, \qquad \varepsilon_0 = 0.
 
 | 编号 | 缺口 | 内容 | 对应 Lean 形式化 |
 |------|------|------|------------------|
-| **N1** | 质量-谱映射待严格化 | $\delta(Z,N)$ 函数形式已构造性导出（$\delta(Z,N) = 1 - \varepsilon_0 N/(Z+N)$，`CQM_超导_专题与扩展.md` §11.8）；质量差 $\Delta m/m_p$ 与 $\delta$ 的定量比例及 $\varepsilon_0$ 的第一性来源待严格推导 | `Gravity.lean`（谱参数 $C,\mathfrak{c}_1$ 已定义）；`SPAF.neutronDefect` 已形式化 $D(\delta)$ |
+| **N1** | 质量-谱映射待严格化 | $\delta(Z,N)$ 函数形式已构造性导出（$\delta(Z,N) = 1 - \varepsilon_0 N/(Z+N)$，`08 超导/CQM_超导_专题与扩展.md` §11.8）；质量差 $\Delta m/m_p$ 与 $\delta$ 的定量比例及 $\varepsilon_0$ 的第一性来源待严格推导 | `Gravity.lean`（谱参数 $C,\mathfrak{c}_1$ 已定义）；`SPAF.neutronDefect` 已形式化 $D(\delta)$ |
 | **N2** | Regge 角亏与 δ 的显式关系缺失 | 尚未写出 $\epsilon(\delta)$ 的具体公式 | `SPAF.neutronDefect` 已定义 $D(\delta)$；`MolecularGeometry.deficitAngleDensity` 与 `BridgeTheorems.reggeDeficit_ricciScalar_*` 已建立角亏-曲率关系，但 $\epsilon(\delta)$ 显式几何公式未写 |
 | **N3** | β 衰变动力学约束未引入 | 孤立中子不稳定，束缚中子稳定的机制未定量 | `MolecularGeometry.freeNeutronDefect` / `boundNeutronDefect` 已区分自由/束缚缺陷，但 β 衰变稳定性动力学未定量 |
 | **N4** | 氘核结合能未精确推导 | 只有数量级估计 | 暂无对应形式化 |
