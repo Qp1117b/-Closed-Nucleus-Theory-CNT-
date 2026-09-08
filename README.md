@@ -66,7 +66,7 @@ CQM 是建立在**因果集**、**关系量子力学**与**圈量子引力**三�
 
 | 文档 | 内容 |
 |:---|:---|
-| [06 Lean形式化/](06 Lean形式化/) | CQM 的 Lean 4 形式化验证项目。9 库全部编译通过：CausalSet、CouplingSpace、CartanAlgebra、SpectralGeometry、Decoherence、PhysicalConstants、PrimeGeometry、Methodology、Superconductivity（模块，涵盖：本体论、BCS 退化与还原、嘉当张量超导方程、推导链、元素嘉当矩阵 CQM→BCS 退化、分子→晶胞嘉当矩阵（链B约束）/Regge晶胞（链A生成）→FG 退相干场、桥接定理、压强-温度几何构型、BCS 渐近分析 G13 闭合） |
+| [06 Lean形式化/](06 Lean形式化/) | CQM 的 Lean 4 形式化验证项目。10 库（9 库编译通过，FGChain 待验证）：CausalSet、CouplingSpace、CartanAlgebra、SpectralGeometry、Decoherence、PhysicalConstants、PrimeGeometry、Methodology、Superconductivity（模块，涵盖：本体论、BCS 退化与还原、嘉当张量超导方程、推导链、元素嘉当矩阵 CQM→BCS 退化、分子→晶胞嘉当矩阵（链B约束）/Regge晶胞（链A生成）→FG 退相干场、桥接定理、压强-温度几何构型、BCS 渐近分析 G13 闭合）、FGChain（纤维丛链路形式化：离散主丛、和乐平庸化、结构群涨落、重组实现、表示、物质场，待编译验证） |
 
 ### 07 推导与数学
 
@@ -242,7 +242,8 @@ CQMFormal/
 │ ├── Wyler常数_A4群论分解.md
 │ └── Wyler常数与CQM框架关系.md
 ├── 11 前沿研究/ ← 前沿交叉文献调研与研究论文
-│ └── FG_贝里曲率与Regge曲率的关联_研究论文.md
+│ ├── FG_贝里曲率与Regge曲率的关联_研究论文.md
+│ └── CQM_前沿研究_规范重组超导与SU5五重态内禀时间.md
 ├── 归档/ ← 已归档文档
 │   ├── CQM_混合_混合矩阵.md
 │   ├── CQM_退相干_质数数轴.md
