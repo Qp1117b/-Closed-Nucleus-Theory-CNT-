@@ -92,7 +92,7 @@ $$P(s) \sim s^2 e^{-s^2} \Rightarrow \beta_{\text{sync}} = \frac{1}{\pi^2}$$
 
 $$N(T) = \frac{T}{2\pi}\ln\frac{T}{2\pi} - \frac{T}{2\pi} + O(\ln T)$$
 
-前网络的"维度"随能量对数增长，与全息原理一致。
+前网络的"维度"随能量对数增长。
 
 ### 3.7 黎曼-西格尔公式 → 几何相位
 
